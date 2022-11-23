@@ -1,0 +1,216 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Createreport" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/word" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="country" Type="InArgument(x:String)" />
+    <x:Property Name="population" Type="InArgument(x:String)" />
+    <x:Property Name="capital" Type="InArgument(x:String)" />
+    <x:Property Name="dataConfidenceLevel" Type="InArgument(x:String)" />
+    <x:Property Name="overview" Type="InArgument(x:String)" />
+    <x:Property Name="economic" Type="InArgument(x:String)" />
+    <x:Property Name="headline1" Type="InArgument(x:String)" />
+    <x:Property Name="headline2" Type="InArgument(x:String)" />
+    <x:Property Name="headline3" Type="InArgument(x:String)" />
+    <x:Property Name="humanInTheLoop" Type="InArgument(x:Boolean)" />
+    <x:Property Name="flagname" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="48">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.Word</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Callout.Activity</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Create report" sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;tempdata\&quot; + country + &quot;_report.docx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="513.6,164.8" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="country_report_template.docx" />
+    <p:WordApplicationScope AutoSave="False" DisplayName="Word Application Scope" FilePath="[&quot;tempdata\&quot; + country + &quot;_report.docx&quot;]" sap:VirtualizedContainerService.HintSize="513.6,2669.6" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+      <p:WordApplicationScope.Body>
+        <ActivityAction x:TypeArguments="ui:WordDocument">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="480,2550.4" sap2010:WorkflowViewState.IdRef="Sequence_29">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <p:WordSetBookmarkContent BookmarkName="Title" BookmarkText="[&quot;Report for country: &quot; + country]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_1" />
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,496.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+              <TryCatch.Try>
+                <Sequence sap:VirtualizedContainerService.HintSize="400,256" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <If Condition="[humanInTheLoop]" sap:VirtualizedContainerService.HintSize="356.8,62.4" sap2010:WorkflowViewState.IdRef="If_6">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                    <If.Then>
+                      <ucas:DownloadStorageFile TimeoutMS="{x:Null}" Destination="tempdata\flag.png" DisplayName="Download Storage File" FolderPath="Main Demo Folder" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="[flagname]" StorageBucketName="Countryreport" />
+                    </If.Then>
+                  </If>
+                  <p:WordReplacePicture DisplayName="Replace Picture" sap:VirtualizedContainerService.HintSize="356.8,62.4" sap2010:WorkflowViewState.IdRef="WordReplacePicture_1" PictureAltText="countryflag" PicturePath="tempdata\flag.png">
+                    <sap:WorkflowViewStateService.ViewState>
+                      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                      </scg:Dictionary>
+                    </sap:WorkflowViewStateService.ViewState>
+                  </p:WordReplacePicture>
+                </Sequence>
+              </TryCatch.Try>
+              <TryCatch.Catches>
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                  <sap:WorkflowViewStateService.ViewState>
+                    <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                      <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                      <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                    </scg:Dictionary>
+                  </sap:WorkflowViewStateService.ViewState>
+                  <ActivityAction x:TypeArguments="s:Exception">
+                    <ActivityAction.Argument>
+                      <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+                    </ActivityAction.Argument>
+                  </ActivityAction>
+                </Catch>
+              </TryCatch.Catches>
+            </TryCatch>
+            <p:WordSetBookmarkContent BookmarkName="reportdate" BookmarkText="[&quot;Report date: &quot; + DateTime.Now.ToString(&quot;yyyy/MM/dd&quot;)]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,62.4" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_2">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsPinned">False</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+            </p:WordSetBookmarkContent>
+            <p:WordSetBookmarkContent BookmarkName="population" BookmarkText="[&quot;Population at report date: &quot; + population]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_3" />
+            <p:WordSetBookmarkContent BookmarkName="Capital" BookmarkText="[&quot;Capital: &quot; + capital]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_4" />
+            <p:WordSetBookmarkContent BookmarkName="confidence" BookmarkText="[&quot;Data confidence &quot; + dataConfidenceLevel]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_7" />
+            <p:WordSetBookmarkContent BookmarkName="Overview" BookmarkText="[overview]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_5" />
+            <p:WordSetBookmarkContent BookmarkName="EconomicReport" BookmarkText="[economic]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_6" />
+            <p:WordSetBookmarkContent BookmarkName="headline1" BookmarkText="[headline1]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_8" />
+            <p:WordSetBookmarkContent BookmarkName="headline2" BookmarkText="[headline2]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_9" />
+            <p:WordSetBookmarkContent BookmarkName="headline3" BookmarkText="[headline3]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_10" />
+            <p:WordExportToPdf DisplayName="Export to PDF" FilePath="[&quot;tempdata\&quot; + country + &quot;_report.pdf&quot;]" sap:VirtualizedContainerService.HintSize="436.8,120.8" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
+          </Sequence>
+        </ActivityAction>
+      </p:WordApplicationScope.Body>
+    </p:WordApplicationScope>
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,259.2" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+      <ui:CommentOut.Body>
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[currentDir + &quot;\tempdata\&quot; +country + &quot;_report.pdf&quot;]" DisplayName="Start Process" FileName="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="StartProcess_2">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+          </ui:StartProcess>
+        </Sequence>
+      </ui:CommentOut.Body>
+    </ui:CommentOut>
+  </Sequence>
+</Activity>

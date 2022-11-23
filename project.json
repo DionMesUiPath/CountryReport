@@ -1,0 +1,66 @@
+{
+  "name": "Countryreport",
+  "description": "A UiPath demo project for creating a country report with Action Center in the loop.\r\n\r\nAccepts two Arguments:\r\ncountry - The country to create the report about\r\nhumanInTheLoop - Enable the Action Center task",
+  "main": "Main.xaml",
+  "dependencies": {
+    "UiPath.Excel.Activities": "[2.16.0]",
+    "UiPath.Form.Activities": "[2.0.3]",
+    "UiPath.FormActivityLibrary": "[2.0.3]",
+    "UiPath.FormActivityLibrary.Contracts": "[2.0.3]",
+    "UiPath.Mail.Activities": "[1.18.1]",
+    "UiPath.Persistence.Activities": "[1.4.2]",
+    "UiPath.System.Activities": "[22.10.3]",
+    "UiPath.Testing.Activities": "[22.10.0]",
+    "UiPath.UIAutomation.Activities": "[22.10.3]",
+    "UiPath.WebAPI.Activities": "[1.13.2]",
+    "UiPath.Word.Activities": "[1.13.0]"
+  },
+  "webServices": [],
+  "entitiesStores": [],
+  "schemaVersion": "4.0",
+  "studioVersion": "22.10.3.0",
+  "projectVersion": "1.0.0",
+  "runtimeOptions": {
+    "autoDispose": false,
+    "netFrameworkLazyLoading": false,
+    "isPausable": true,
+    "isAttended": false,
+    "requiresUserInteraction": true,
+    "supportsPersistence": true,
+    "excludedLoggedData": [
+      "Private:*",
+      "*password*"
+    ],
+    "executionType": "Workflow",
+    "readyForPiP": false,
+    "startsInPiP": false,
+    "mustRestoreAllDependencies": true,
+    "pipType": "ChildSession"
+  },
+  "designOptions": {
+    "projectProfile": "Developement",
+    "outputType": "Process",
+    "libraryOptions": {
+      "includeOriginalXaml": false,
+      "privateWorkflows": []
+    },
+    "processOptions": {
+      "ignoredFiles": []
+    },
+    "fileInfoCollection": [],
+    "modernBehavior": true
+  },
+  "expressionLanguage": "VisualBasic",
+  "entryPoints": [
+    {
+      "filePath": "Main.xaml",
+      "uniqueId": "04c6e1f0-b7f0-4efa-8b00-e8b4dde62de6",
+      "input": [],
+      "output": []
+    }
+  ],
+  "isTemplate": false,
+  "templateProjectData": {},
+  "publishData": {},
+  "targetFramework": "Windows"
+}

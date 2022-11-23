@@ -1,0 +1,187 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Getoverview" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="country" Type="InArgument(x:String)" />
+    <x:Property Name="overview" Type="InOutArgument(x:String)" />
+  </x:Members>
+  <sap:VirtualizedContainerService.HintSize>792,1222.4</sap:VirtualizedContainerService.HintSize>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Persistence.Activities.Model.Task</x:String>
+      <x:String>UiPath.Persistence.Activities.FormTask</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities.Models</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.Word</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Callout.Activity</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Get overview" sap:VirtualizedContainerService.HintSize="496,1157.6" sap2010:WorkflowViewState.IdRef="Sequence_20">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="tmpcountry" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <If Condition="[country = &quot;US&quot;]" sap:VirtualizedContainerService.HintSize="433.6,365.6" sap2010:WorkflowViewState.IdRef="If_1">
+      <If.Then>
+        <Assign sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_10">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[tmpcountry]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">united-states</InArgument>
+          </Assign.Value>
+        </Assign>
+      </If.Then>
+      <If.Else>
+        <Assign sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_20">
+          <Assign.To>
+            <OutArgument x:TypeArguments="x:String">[tmpcountry]</OutArgument>
+          </Assign.To>
+          <Assign.Value>
+            <InArgument x:TypeArguments="x:String">[country.ToLower]</InArgument>
+          </Assign.Value>
+        </Assign>
+      </If.Else>
+    </If>
+    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Finland - Overview" sap:VirtualizedContainerService.HintSize="433.6,628.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ed37f1a9-7989-44ee-89bd-ffbd4b29bbb8" Version="V2">
+      <uix:NApplicationCard.Body>
+        <ActivityAction x:TypeArguments="x:Object">
+          <ActivityAction.Argument>
+            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+          </ActivityAction.Argument>
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,402.4" sap2010:WorkflowViewState.IdRef="Sequence_42">
+            <sap:WorkflowViewStateService.ViewState>
+              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              </scg:Dictionary>
+            </sap:WorkflowViewStateService.ViewState>
+            <uix:NGetText DisplayName="Get Text 'Overview'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="ed37f1a9-7989-44ee-89bd-ffbd4b29bbb8" TextString="[overview]" Version="V3">
+              <uix:NGetText.Target>
+                <uix:TargetAnchorable BrowserURL="https://taxsummaries.pwc.com/Finland" DesignTimeRectangle="373, 338, 1020, 400" DesignTimeScaleFactor="1" FriendlyName="'Finland, a'" FullSelectorArgument="&lt;webctrl id='txtPageBody' tag='DIV' /&gt;" FuzzySelectorArgument="&lt;webctrl id='txtPageBody' tag='DIV' type='' class='section__content' aaname='              ' /&gt;" Guid="f9d218bc-ba6e-4d4d-bcda-1a63b0510da0" InformativeScreenshot="89c51ebd414716c8c54b91ecb3bd6c3a.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Finland - Overview' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                  <uix:TargetAnchorable.Anchors>
+                    <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                      <uix:Target DesignTimeRectangle="373, 283, 116, 24" ElementType="Text" FriendlyName="'Overview'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='section__heading' aaname='Overview' check:innerText='Overview' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                    </scg:List>
+                  </uix:TargetAnchorable.Anchors>
+                </uix:TargetAnchorable>
+              </uix:NGetText.Target>
+            </uix:NGetText>
+            <Assign sap:VirtualizedContainerService.HintSize="337.6,71.2" sap2010:WorkflowViewState.IdRef="Assign_17">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[overview]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[overview.Substring(1,450) + " ....."]</InArgument>
+              </Assign.Value>
+            </Assign>
+          </Sequence>
+        </ActivityAction>
+      </uix:NApplicationCard.Body>
+      <uix:NApplicationCard.TargetApp>
+        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="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" InformativeScreenshot="98901e64a8acb1b032e4c5181eac3a1d.jpg" Selector="&lt;html app='chrome.exe' title='Finland - Overview' /&gt;" Url="[&quot;https://taxsummaries.pwc.com/&quot; + tmpcountry]" />
+      </uix:NApplicationCard.TargetApp>
+    </uix:NApplicationCard>
+  </Sequence>
+</Activity>

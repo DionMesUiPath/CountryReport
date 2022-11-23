@@ -1,0 +1,271 @@
+<Activity mc:Ignorable="sap sap2010" x:Class="Wikiflag" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <x:Members>
+    <x:Property Name="humanInTheLoop" Type="InArgument(x:Boolean)" />
+    <x:Property Name="flagname" Type="InOutArgument(x:String)" />
+    <x:Property Name="country" Type="InArgument(x:String)" />
+  </x:Members>
+  <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
+  <TextExpression.NamespacesForImplementation>
+    <scg:List x:TypeArguments="x:String" Capacity="74">
+      <x:String>System.Activities</x:String>
+      <x:String>System.Activities.Statements</x:String>
+      <x:String>System</x:String>
+      <x:String>System.Collections</x:String>
+      <x:String>System.Collections.Generic</x:String>
+      <x:String>System.Data</x:String>
+      <x:String>System.Drawing</x:String>
+      <x:String>System.Net.Mail</x:String>
+      <x:String>UiPath.Core</x:String>
+      <x:String>UiPath.Core.Activities</x:String>
+      <x:String>System.Xml.Serialization</x:String>
+      <x:String>UiPath.Persistence.Activities.Model.Task</x:String>
+      <x:String>UiPath.Persistence.Activities.FormTask</x:String>
+      <x:String>UiPath.Core.Activities.Storage</x:String>
+      <x:String>UiPath.Core.Activities.Orchestrator</x:String>
+      <x:String>UiPath.Word.Activities</x:String>
+      <x:String>System.Collections.ObjectModel</x:String>
+      <x:String>UiPath.Web</x:String>
+      <x:String>System.Runtime.Serialization</x:String>
+      <x:String>UiPath.Web.Activities</x:String>
+      <x:String>UiPath.UIAutomationNext.Enums</x:String>
+      <x:String>UiPath.UIAutomationNext.Activities</x:String>
+      <x:String>UiPath.Platform.ObjectLibrary</x:String>
+      <x:String>System.ComponentModel</x:String>
+      <x:String>UiPath.Shared.Activities</x:String>
+      <x:String>System.Reflection</x:String>
+      <x:String>System.Security</x:String>
+      <x:String>UiPath.UIAutomationNext.Models.ExtractData</x:String>
+      <x:String>UiPath.UIAutomationNext.Contracts</x:String>
+      <x:String>UiPath.UIAutomationCore.Contracts</x:String>
+      <x:String>System.Activities.Expressions</x:String>
+      <x:String>System.Diagnostics</x:String>
+      <x:String>System.Linq</x:String>
+      <x:String>System.Xml</x:String>
+      <x:String>System.Xml.Linq</x:String>
+      <x:String>System.IO</x:String>
+      <x:String>Microsoft.VisualBasic</x:String>
+      <x:String>GlobalVariablesNamespace</x:String>
+      <x:String>GlobalConstantsNamespace</x:String>
+    </scg:List>
+  </TextExpression.NamespacesForImplementation>
+  <TextExpression.ReferencesForImplementation>
+    <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.Word</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Excel</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Callout.Activity</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>NPOI</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Private.Uri</AssemblyReference>
+      <AssemblyReference>System.Private.Xml</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+    </scg:List>
+  </TextExpression.ReferencesForImplementation>
+  <Sequence DisplayName="Wiki flag" sap:VirtualizedContainerService.HintSize="200,92.8" sap2010:WorkflowViewState.IdRef="Sequence_63">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="flagurl" />
+    </Sequence.Variables>
+    <sap:WorkflowViewStateService.ViewState>
+      <scg:Dictionary x:TypeArguments="x:String, x:Object">
+        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+      </scg:Dictionary>
+    </sap:WorkflowViewStateService.ViewState>
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="518.4,958.4" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+      <TryCatch.Try>
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Portugal - Wikipedia" sap:VirtualizedContainerService.HintSize="433.6,1132.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="Simulate" ScopeGuid="9a54b449-aec9-42b7-904f-27ac1e96a267" Version="V1" WindowResize="Maximize">
+          <uix:NApplicationCard.Body>
+            <ActivityAction x:TypeArguments="x:Object">
+              <ActivityAction.Argument>
+                <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+              </ActivityAction.Argument>
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,906.4" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                <sap:WorkflowViewStateService.ViewState>
+                  <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  </scg:Dictionary>
+                </sap:WorkflowViewStateService.ViewState>
+                <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="None" DisplayName="Type Into 'Belgium'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="356.8,228" sap2010:WorkflowViewState.IdRef="NTypeInto_1" ScopeIdentifier="9a54b449-aec9-42b7-904f-27ac1e96a267" Text="[country]" Version="V1">
+                  <uix:NTypeInto.Target>
+                    <uix:TargetAnchorable BrowserURL="https://en.wikipedia.org/wiki/Main_Page" DesignTimeRectangle="1499, 212, 384, 44" ElementType="InputBox" FriendlyName="'Belgium'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='search' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='search' aaname='Search' /&gt;" Guid="ae5854c0-69ac-4067-b2f3-8dcc6c3ca841" ImageBase64="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" InformativeScreenshot="0047b2607750ca90269563544f6d90ac.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wikipedia, the free encyclopedia' /&gt;" SearchSteps="FuzzySelector, Image" />
+                  </uix:NTypeInto.Target>
+                </uix:NTypeInto>
+                <uix:NClick ClickType="Single" DisplayName="Click 'Go'" sap:VirtualizedContainerService.HintSize="356.8,167.2" sap2010:WorkflowViewState.IdRef="NClick_1" KeyModifiers="None" MouseButton="Left" ScopeIdentifier="9a54b449-aec9-42b7-904f-27ac1e96a267" Version="V1">
+                  <uix:NClick.Target>
+                    <uix:TargetAnchorable BrowserURL="https://en.wikipedia.org/wiki/Main_Page" DesignTimeRectangle="1838, 214, 44, 41" ElementType="Button" FriendlyName="'Go'" FullSelectorArgument="&lt;webctrl tag='INPUT' type='submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' type='submit' aaname='Go to a page with this exact name if it exists' check:text='Go' /&gt;" Guid="1eb62c4a-937a-4a03-a2bf-c75dc2d15f89" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADAAAAAtCAYAAADoSujCAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIqSURBVGhD7Zm7SgNBFIbzTj5B7AVBVJLCC4pgCjEQwUYDsTCKiIJYWIiIFhGxCmiV3gtEhIhVEAWxFCw21x3zbzi42YzL7szEzYQtPggzZ8J8c86cDCTSbDaZzkSGFh6YTkSXi2zv8p2ZpqmnAIhvPFsSlkDm9I3pxFi6xKayL2w4+dgW+PwymU5AgjLRaDT0FggzEAShQNAMlEC9XlcncJUvsOzOAUutpi3w+aZwx42VQXkGjk5ybDI+zUZGx7lg7vwiz10rgrIMlD++rZN2bjixlLJwjiMWa3jf5QdlGbBvfmZukV0XbrtiMIY5ilvPbHfF+EVJBlA2tKnNVq27nawzU1jLi/OKEoGJWLvmcbpeygIxlAncCZlSkhZAt6HT5JXNXyBWZJ0TaQF7+fDm3aB1+4fH3Hkv2AVqtZp/AapndBrevBvUnfAdvHkvSGfgV2CFO++GagGhDGhfQqKXsReXWEgAUBudnU94bqP03MBaVW1UWOCs9bah00Q9u20Ic3RvANby4ryiRADYN4VM8F6eKBXnQw+/I844PygTwMmuZbY6NgfQnYBz3I6MhF2gWq2KCxDoSnQneGAOZXP/VO6IE5VQLgCQDWwIDzuUFkCrRAnZ74cKiZ4I+EFWInABICPRFwJAVKJvBIBdQkSgUqkEKwAgoWUJidJ3GfBLKBA0AyVgGEaYgX9n8DKAAZ2gv1mjyWI7A2SjE7FMie3mXvUUwMnT5g3DYD/F2nDOAPfReQAAAABJRU5ErkJggg==" InformativeScreenshot="58768176fbd5787415636be2e3e81c7e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Wikipedia, the free encyclopedia' /&gt;" SearchSteps="FuzzySelector, Image">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="1832, 156, 51, 21" ElementType="Text" FriendlyName="'Log in'" FullSelectorArgument="&lt;webctrl parentid='pt-login' tag='SPAN' /&gt;" FuzzySelectorArgument="&lt;webctrl parentid='pt-login' tag='SPAN' type='' aaname='Log in' check:text='Log in' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAADcAAAAZCAYAAACVfbYAAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAIoSURBVFhH7ZYxS8NAFMed/BZZ/RhuuhQ6lYggCi4ZhEJBHIuTRRACgggO0q0ghIRCaejgYUECgVARQkGQgCCGiigqFkrh7yW5NLG2VdPGUu0PDnqv7+7e/+7du8zgDzMVN6lMxU0q/0ecti9hdqGEgs0M48bWwS9I4OUGM/yMqbhJZSquJ+0GSL6CZMoZQ1tSgSAaqD+1mYNPG4/6OdLrvl8RW7KFulT6eq3utDSIO0dOf0atEKw9t6RC1D6nbjRxL3XkVryJeVFHWTMh51UsJqhtuYJyaLxdLIFzAtggKJyaKMsEfFIC5/hGFDe/rIBbUXGomiDqOQQ3FgU5o+n5MSKJs06K7mRZ/ZVZGLdeMNyuCXeZNxNZKoLL6LDCB3pvID2EuNl013wPBgTHvl9nBo8I4m5wvEb91jRYzBLQBNlx5qiAvNHeWcUNJmd8TtXaoRJZHC/def0O1xCdFM0YCE8XQRxNyR675GPLwV0K/+5m0H8d+onz+x0aKKRpTPREYxVnhQrFBIobRVoCtaMh0jI+cd8oKNuXeHT6/QoKrbZZt4z/ujgFq3tViAc92smVF/SgpyCpQr4NlPR7CpxyPgZxA1p48Lcf8RZsrQphyfPjUsM/4pHE/SbeRhJorB8H8YqjO7+aUrB16iZzgH/nunZ61MR8cg3IGSoiUYSQr4HQu/nhc+ni4+fSqIk/LV8syCItNv7dTChY3KyC2C3mEB9ju3PxA7wDNkjy4wvDKKEAAAAASUVORK5CYII=" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NClick.Target>
+                </uix:NClick>
+                <uix:NGetAttribute Attribute="src" DisplayName="Get Attribute 'Flag'" sap:VirtualizedContainerService.HintSize="356.8,217.6" sap2010:WorkflowViewState.IdRef="NGetAttribute_1" ScopeIdentifier="9a54b449-aec9-42b7-904f-27ac1e96a267" Timeout="5" Version="V1">
+                  <uix:NGetAttribute.Result>
+                    <OutArgument x:TypeArguments="x:String">[flagurl]</OutArgument>
+                  </uix:NGetAttribute.Result>
+                  <uix:NGetAttribute.Target>
+                    <uix:TargetAnchorable BrowserURL="https://en.wikipedia.org/wiki/Portugal" DesignTimeRectangle="1458, 699, 198, 133" ElementType="Icon" FriendlyName="'IMG'" FullSelectorArgument="&lt;webctrl aaname='Flag of Portugal' parentid='mw-content-text' tag='IMG' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Flag of Portugal' parentid='mw-content-text' tag='IMG' type='' /&gt;" Guid="7aae5df1-4b3b-434f-8255-0688dfa6ac9e" ImageBase64="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" InformativeScreenshot="9b5242e6b106c6c6de293eceedca2279.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portugal - Wikipedia' /&gt;" SearchSteps="FuzzySelector, Image">
+                      <uix:TargetAnchorable.Anchors>
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="1539, 837, 37, 21" ElementType="Text" FriendlyName="'Flag'" FullSelectorArgument="&lt;webctrl aaname='Flag' parentid='mw-content-text' tag='A' /&gt;" FuzzySelectorArgument="&lt;webctrl aaname='Flag' parentid='mw-content-text' tag='A' type='' check:text='Flag' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAACkAAAAZCAYAAACsGgdbAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAI8SURBVFhH7ZbPa9pgGMd32n/h0aPH3nL1ZHeqFIplMAgMxsoOwmAIuyiMoVAQvBR6ciexBIISMoJUpRKai0p7aNkYyggTQRyyYHv57v1hU98ubo5F4sDD9/A87zd5P8n7PE/yaHpzi3XXBtIvbSD90v8H2Tg8wePo7xUv29xv1licNu+vX5U8IBUk3teRzXvryBpyf7CQFRT7oslTG0hR/kI6I3SqNchPFYTJGl0P7SiQcxY6ozkf8w7QONax/YT7ws8MFC8+oXhA4gMTvTmvj5ATnOcVlotnWig1u9A/msi+URGisG/bGLjX2yi94nDxnAm12UYxV2EPFootBblYbmdTPYQcdZHaPcFW4frewzRE6TW9vobGLDc+NRh4ovx1zjdFr6qx/BKQi7vb7Wyqv6hJft87yAn0DIljJHYeeJ1rZHeWgvzHxnEmGPS/oEGOu/ShjmRSQYQeoQtpe9Ydl/eaj5A/cFXVEWVAXOFdFXKmiSTdeC0gO3VIJJbetXE1mgjepY/7ZsXH3StXWJw6m4q+IWkounFUgzrkOe/GIfkzA1skv7o3+bmFbbrBnoZsuQ29ScZKgc9BNlaE+y4YQTEF0mobZ4qB1cJLWeFjhEh6YeDItDEmXppLnc6VgWNDL2iQZsM8Is+G+fM/QAavS6TpAx5eCvlAIGn9RvYNqN/E/F1NCh8NomDeZN9CgtRpaF9Dvko+n3SmHmt8fO3VcP5d9Ad23OMLC2l30M9+RApd9H4ZS2tXk166xU/K3mkUJBl1OAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
+                        </scg:List>
+                      </uix:TargetAnchorable.Anchors>
+                    </uix:TargetAnchorable>
+                  </uix:NGetAttribute.Target>
+                </uix:NGetAttribute>
+                <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https:&quot; + flagurl]" sap:VirtualizedContainerService.HintSize="356.8,80.8" sap2010:WorkflowViewState.IdRef="HttpClient_6" Method="GET" ResourcePath="tempdata\flag.png" TimeoutMS="6000">
+                  <ui:HttpClient.Attachments>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </ui:HttpClient.Attachments>
+                  <ui:HttpClient.Cookies>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </ui:HttpClient.Cookies>
+                  <ui:HttpClient.Headers>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </ui:HttpClient.Headers>
+                  <ui:HttpClient.Parameters>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </ui:HttpClient.Parameters>
+                  <ui:HttpClient.UrlSegments>
+                    <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                  </ui:HttpClient.UrlSegments>
+                </ui:HttpClient>
+              </Sequence>
+            </ActivityAction>
+          </uix:NApplicationCard.Body>
+          <uix:NApplicationCard.TargetApp>
+            <uix:TargetApp Area="-9, -9, 1938, 1060" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAADsSURBVDhPpZMBDYQwDEVBBRIQgQKkIGEG5gALGMAGBjCAjO3yxv2lg+XChSU/t3bt7++/0OiEEOI/+Ladp1bwBK+ahfcE27bFYRiQE+d5TslxHHN8HEd6B9yXZYld16Wafd9PBTy0bRvXdU0ExH3fF4TkuAPIdM8rUGQfNAlS732RFzHIBKyCbH6VQwVQDBhk48JEHm3BNE1JhWLInXM5BgUBcvECc4ghgwDZxBBaL0BBAJDMFMjYlf3J0QjBtf5GwDRUaBX9Qxhs/RFuBADZ1mkmX80TqgTywOK6u8DnUCV5gtSsUyv4hbOraT5zNVPvKCo8XgAAAABJRU5ErkJggg==" InformativeScreenshot="3a78974c6b1de268f469a6eb63d71e23.png" Selector="&lt;html app='chrome.exe' title='Portugal - Wikipedia'/&gt;" Url="https://en.wikipedia.org/" />
+          </uix:NApplicationCard.TargetApp>
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+        </uix:NApplicationCard>
+      </TryCatch.Try>
+      <TryCatch.Catches>
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="484.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_10">
+          <sap:WorkflowViewStateService.ViewState>
+            <scg:Dictionary x:TypeArguments="x:String, x:Object">
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsPinned">False</x:Boolean>
+            </scg:Dictionary>
+          </sap:WorkflowViewStateService.ViewState>
+          <ActivityAction x:TypeArguments="s:Exception">
+            <ActivityAction.Argument>
+              <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
+            </ActivityAction.Argument>
+            <Sequence sap:VirtualizedContainerService.HintSize="400,280" sap2010:WorkflowViewState.IdRef="Sequence_67">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="356.8,69.6" sap2010:WorkflowViewState.IdRef="Assign_27">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[flagurl]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">//upload.wikimedia.org/wikipedia/commons/d/dc/Mike_flag.svg</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ui:HttpClient Body="{x:Null}" ConsumerKey="{x:Null}" ConsumerSecret="{x:Null}" ContinueOnError="{x:Null}" FileAttachments="{x:Null}" OAuth1Token="{x:Null}" OAuth1TokenSecret="{x:Null}" OAuth2Token="{x:Null}" Password="{x:Null}" ResponseAttachment="{x:Null}" ResponseHeaders="{x:Null}" Result="{x:Null}" SecureClientCertificatePassword="{x:Null}" SecurePassword="{x:Null}" StatusCode="{x:Null}" Username="{x:Null}" AcceptFormat="ANY" AuthenticationType="None" BodyFormat="application/xml" ClientCertificate="[Nothing]" ClientCertificatePassword="[Nothing]" DisplayName="HTTP Request" EnableSSLVerification="True" EndPoint="[&quot;https:&quot; + flagurl]" sap:VirtualizedContainerService.HintSize="356.8,80.8" sap2010:WorkflowViewState.IdRef="HttpClient_7" Method="GET" ResourcePath="tempdata\flag.png" TimeoutMS="6000">
+                <ui:HttpClient.Attachments>
+                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                </ui:HttpClient.Attachments>
+                <ui:HttpClient.Cookies>
+                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                </ui:HttpClient.Cookies>
+                <ui:HttpClient.Headers>
+                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                </ui:HttpClient.Headers>
+                <ui:HttpClient.Parameters>
+                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                </ui:HttpClient.Parameters>
+                <ui:HttpClient.UrlSegments>
+                  <scg:Dictionary x:TypeArguments="x:String, InArgument(x:String)" />
+                </ui:HttpClient.UrlSegments>
+              </ui:HttpClient>
+            </Sequence>
+          </ActivityAction>
+        </Catch>
+      </TryCatch.Catches>
+      <TryCatch.Finally>
+        <If Condition="[humanInTheLoop]" sap:VirtualizedContainerService.HintSize="481.6,717.6" sap2010:WorkflowViewState.IdRef="If_9">
+          <If.Then>
+            <Sequence sap:VirtualizedContainerService.HintSize="400,452" sap2010:WorkflowViewState.IdRef="Sequence_66">
+              <sap:WorkflowViewStateService.ViewState>
+                <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                </scg:Dictionary>
+              </sap:WorkflowViewStateService.ViewState>
+              <Assign sap:VirtualizedContainerService.HintSize="356.8,69.6" sap2010:WorkflowViewState.IdRef="Assign_26">
+                <Assign.To>
+                  <OutArgument x:TypeArguments="x:String">[flagname]</OutArgument>
+                </Assign.To>
+                <Assign.Value>
+                  <InArgument x:TypeArguments="x:String">["flag" + Guid.NewGuid.ToString + ".png"]</InArgument>
+                </Assign.Value>
+              </Assign>
+              <ucas:UploadStorageFile FileResource="{x:Null}" TimeoutMS="{x:Null}" Destination="[flagname]" DisplayName="Upload Storage File" FolderPath="Main Demo Folder" sap:VirtualizedContainerService.HintSize="356.8,251.2" sap2010:WorkflowViewState.IdRef="UploadStorageFile_4" Path="tempdata\flag.png" StorageBucketName="Countryreport" />
+            </Sequence>
+          </If.Then>
+        </If>
+      </TryCatch.Finally>
+    </TryCatch>
+  </Sequence>
+</Activity>
