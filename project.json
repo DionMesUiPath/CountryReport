@@ -3,14 +3,9 @@
   "description": "A UiPath demo project for creating a country report with Action Center in the loop.\r\n\r\nAccepts two Arguments:\r\ncountry - The country to create the report about\r\nhumanInTheLoop - Enable the Action Center task",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Excel.Activities": "[2.16.0]",
-    "UiPath.Form.Activities": "[2.0.3]",
-    "UiPath.FormActivityLibrary": "[2.0.3]",
-    "UiPath.FormActivityLibrary.Contracts": "[2.0.3]",
     "UiPath.Mail.Activities": "[1.18.1]",
     "UiPath.Persistence.Activities": "[1.4.2]",
     "UiPath.System.Activities": "[22.10.3]",
-    "UiPath.Testing.Activities": "[22.10.0]",
     "UiPath.UIAutomation.Activities": "[22.10.3]",
     "UiPath.WebAPI.Activities": "[1.13.2]",
     "UiPath.Word.Activities": "[1.13.0]"

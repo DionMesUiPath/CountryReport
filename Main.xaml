@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.country="Finland" this:Main.humanInTheLoop="True" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upaf="clr-namespace:UiPath.Persistence.Activities.FormTask;assembly=UiPath.Persistence.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" this:Main.country="Finland" this:Main.humanInTheLoop="False" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:av="http://schemas.microsoft.com/winfx/2006/xaml/presentation" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ucas="clr-namespace:UiPath.Core.Activities.Storage;assembly=UiPath.System.Activities" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upaf="clr-namespace:UiPath.Persistence.Activities.FormTask;assembly=UiPath.Persistence.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="country" Type="InArgument(x:String)" />
     <x:Property Name="humanInTheLoop" Type="InArgument(x:Boolean)" />
@@ -6,7 +6,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>944,2176.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>901.6,2176.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="94">
@@ -41,7 +41,6 @@
       <x:String>UiPath.Core.Activities.Orchestrator</x:String>
       <x:String>UiPath.Word.Activities</x:String>
       <x:String>System.Collections.ObjectModel</x:String>
-      <x:String>System.Activities.DynamicUpdate</x:String>
       <x:String>UiPath.Web</x:String>
       <x:String>System.Runtime.Serialization</x:String>
       <x:String>UiPath.Web.Activities</x:String>
@@ -130,7 +129,7 @@
       <Variable x:TypeArguments="x:String" Name="flagname" />
       <Variable x:TypeArguments="x:String" Default="Unknown" Name="dataConfidenceLevel" />
       <Variable x:TypeArguments="x:String" Default="Not found" Name="capital" />
-      <Variable x:TypeArguments="x:String" Default="Unknown" Name="population" />
+      <Variable x:TypeArguments="x:String" Default="Unknown" Name="employed" />
       <Variable x:TypeArguments="x:String" Default="No overview found." Name="overview" />
       <Variable x:TypeArguments="x:String" Default="No economic insights" Name="economic" />
       <Variable x:TypeArguments="x:String" Name="headline1">
@@ -192,10 +191,14 @@
                   <av:PointCollection x:Key="ConnectorLocation">100,646 100,723.6</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Population" sap:VirtualizedContainerService.HintSize="200,62.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="datatask\Getpopulationfromworldometers.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetEmployed.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,123.19999999999999" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="datatask\GetEmployed.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
-                  <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
-                  <OutArgument x:TypeArguments="x:String" x:Key="population">[population]</OutArgument>
+                  <InArgument x:TypeArguments="x:String" x:Key="country">
+                    <VisualBasicValue x:TypeArguments="x:String" ExpressionText="country" />
+                  </InArgument>
+                  <OutArgument x:TypeArguments="x:String" x:Key="employed">
+                    <VisualBasicReference x:TypeArguments="x:String" ExpressionText="employed" />
+                  </OutArgument>
                 </ui:InvokeWorkflowFile.Arguments>
               </ui:InvokeWorkflowFile>
               <FlowStep.Next>
@@ -209,12 +212,8 @@
                   </sap:WorkflowViewStateService.ViewState>
                   <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get overview" sap:VirtualizedContainerService.HintSize="200,62.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="datatask\Getoverview.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
-                      <InArgument x:TypeArguments="x:String" x:Key="country">
-                        <VisualBasicValue x:TypeArguments="x:String" ExpressionText="country" />
-                      </InArgument>
-                      <InOutArgument x:TypeArguments="x:String" x:Key="overview">
-                        <VisualBasicReference x:TypeArguments="x:String" ExpressionText="overview" />
-                      </InOutArgument>
+                      <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
+                      <InOutArgument x:TypeArguments="x:String" x:Key="overview">[overview]</InOutArgument>
                     </ui:InvokeWorkflowFile.Arguments>
                   </ui:InvokeWorkflowFile>
                   <FlowStep.Next>
@@ -228,12 +227,8 @@
                       </sap:WorkflowViewStateService.ViewState>
                       <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get economicreport" sap:VirtualizedContainerService.HintSize="200,62.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="datatask\Geteconomicreport.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
-                          <InArgument x:TypeArguments="x:String" x:Key="country">
-                            <VisualBasicValue x:TypeArguments="x:String" ExpressionText="country" />
-                          </InArgument>
-                          <OutArgument x:TypeArguments="x:String" x:Key="economic">
-                            <VisualBasicReference x:TypeArguments="x:String" ExpressionText="economic" />
-                          </OutArgument>
+                          <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
+                          <OutArgument x:TypeArguments="x:String" x:Key="economic">[economic]</OutArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
                       <FlowStep.Next>
@@ -302,7 +297,7 @@
                                           <upaf:CreateFormTask.FormData>
                                             <InArgument x:TypeArguments="x:String" x:Key="Country">[country]</InArgument>
                                             <InOutArgument x:TypeArguments="x:String" x:Key="Capital">[capital]</InOutArgument>
-                                            <InOutArgument x:TypeArguments="x:String" x:Key="Population">[population]</InOutArgument>
+                                            <InOutArgument x:TypeArguments="x:String" x:Key="Population">[employed]</InOutArgument>
                                             <InOutArgument x:TypeArguments="x:String" x:Key="Overview">[overview]</InOutArgument>
                                             <InOutArgument x:TypeArguments="x:String" x:Key="Economy">[economic]</InOutArgument>
                                             <InOutArgument x:TypeArguments="x:String" x:Key="Headline1">[headline1]</InOutArgument>
@@ -338,17 +333,39 @@
                                           </sap:WorkflowViewStateService.ViewState>
                                           <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Createreport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,62.4" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Createreport.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
-                                              <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="population">[population]</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="capital">[capital]</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="dataConfidenceLevel">[dataConfidenceLevel]</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="overview">[overview]</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="economic">[economic]</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="headline1">[headline1]</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="headline2">[headline2]</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="headline3">[headline3]</InArgument>
-                                              <InArgument x:TypeArguments="x:Boolean" x:Key="humanInTheLoop">[humanInTheLoop]</InArgument>
-                                              <InArgument x:TypeArguments="x:String" x:Key="flagname">[flagname]</InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="country">
+                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="country" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="capital">
+                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="capital" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="dataConfidenceLevel">
+                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="dataConfidenceLevel" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="overview">
+                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="overview" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="economic">
+                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="economic" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="headline1">
+                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="headline1" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="headline2">
+                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="headline2" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="headline3">
+                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="headline3" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:Boolean" x:Key="humanInTheLoop">
+                                                <VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="humanInTheLoop" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="flagname">
+                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="flagname" />
+                                              </InArgument>
+                                              <InArgument x:TypeArguments="x:String" x:Key="employed">
+                                                <VisualBasicValue x:TypeArguments="x:String" ExpressionText="employed" />
+                                              </InArgument>
                                             </ui:InvokeWorkflowFile.Arguments>
                                           </ui:InvokeWorkflowFile>
                                           <FlowStep.Next>
