@@ -3,7 +3,7 @@
     <x:Property Name="country" Type="InArgument(x:String)" />
     <x:Property Name="overview" Type="InOutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1208,1137.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1208,1160.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="74">
@@ -114,7 +114,7 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get overview" sap:VirtualizedContainerService.HintSize="496,540" sap2010:WorkflowViewState.IdRef="Sequence_20">
+  <Sequence DisplayName="Get overview" sap:VirtualizedContainerService.HintSize="532.8,1096" sap2010:WorkflowViewState.IdRef="Sequence_20">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="tmpcountry" />
     </Sequence.Variables>
@@ -123,7 +123,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[country = &quot;US&quot;]" sap:VirtualizedContainerService.HintSize="433.6,62.4" sap2010:WorkflowViewState.IdRef="If_1">
+    <If Condition="[country = &quot;US&quot;]" sap:VirtualizedContainerService.HintSize="470.4,62.4" sap2010:WorkflowViewState.IdRef="If_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -151,7 +151,7 @@
         </Assign>
       </If.Else>
     </If>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="433.6,314.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="470.4,870.4" sap2010:WorkflowViewState.IdRef="TryCatch_2">
       <TryCatch.Try>
         <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Finland - Overview" sap:VirtualizedContainerService.HintSize="433.6,629.6" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="ed37f1a9-7989-44ee-89bd-ffbd4b29bbb8" Version="V2">
           <uix:NApplicationCard.Body>
@@ -181,7 +181,7 @@
                     <OutArgument x:TypeArguments="x:String">[overview]</OutArgument>
                   </Assign.To>
                   <Assign.Value>
-                    <InArgument x:TypeArguments="x:String">[overview.Substring(1,450) + " ....."]</InArgument>
+                    <InArgument x:TypeArguments="x:String">[overview.Substring(0,450) + " ....."]</InArgument>
                   </Assign.Value>
                 </Assign>
               </Sequence>
@@ -199,10 +199,10 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,140" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="436.8,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
