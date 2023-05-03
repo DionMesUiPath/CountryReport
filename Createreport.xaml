@@ -12,7 +12,7 @@
     <x:Property Name="flagname" Type="InArgument(x:String)" />
     <x:Property Name="employed" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>901.6,3512</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>689.6,3790.4</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
@@ -109,49 +109,49 @@
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Create report" sap:VirtualizedContainerService.HintSize="595.2,3447.2" sap2010:WorkflowViewState.IdRef="Sequence_4">
+  <Sequence DisplayName="Create report" sap:VirtualizedContainerService.HintSize="691.2,3725.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;tempdata\&quot; + country + &quot;_report.docx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="532.8,164.8" sap2010:WorkflowViewState.IdRef="CopyFile_1" Overwrite="True" Path="country_report_template.docx" />
-    <p:WordApplicationScope AutoSave="False" DisplayName="Word Application Scope" FilePath="[&quot;tempdata\&quot; + country + &quot;_report.docx&quot;]" sap:VirtualizedContainerService.HintSize="532.8,2820" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
+    <ui:CopyFile ContinueOnError="{x:Null}" Destination="[&quot;tempdata\&quot; + country + &quot;_report.docx&quot;]" DisplayName="Copy File" sap:VirtualizedContainerService.HintSize="628.8,155.2" sap2010:WorkflowViewState.IdRef="CopyFile_1" Path="country_report_template.docx" />
+    <p:WordApplicationScope AutoSave="False" DisplayName="Word Application Scope" FilePath="[&quot;tempdata\&quot; + country + &quot;_report.docx&quot;]" sap:VirtualizedContainerService.HintSize="628.8,3100" sap2010:WorkflowViewState.IdRef="WordApplicationScope_1">
       <p:WordApplicationScope.Body>
         <ActivityAction x:TypeArguments="ui:WordDocument">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="ui:WordDocument" Name="WordDocumentScope" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="499.2,2700.8" sap2010:WorkflowViewState.IdRef="Sequence_29">
+          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="595.2,2990.4" sap2010:WorkflowViewState.IdRef="Sequence_29">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:WordSetBookmarkContent BookmarkName="Title" BookmarkText="[&quot;Report for country: &quot; + country]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_1" />
-            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="436.8,528.8" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+            <p:WordSetBookmarkContent BookmarkName="Title" BookmarkText="[&quot;Report for country: &quot; + country]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_1" />
+            <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="532.8,935.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
               <TryCatch.Try>
-                <Sequence sap:VirtualizedContainerService.HintSize="400,288" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                <Sequence sap:VirtualizedContainerService.HintSize="496,704" sap2010:WorkflowViewState.IdRef="Sequence_57">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <If Condition="[humanInTheLoop]" sap:VirtualizedContainerService.HintSize="337.6,62.4" sap2010:WorkflowViewState.IdRef="If_6">
+                  <If Condition="[humanInTheLoop]" sap:VirtualizedContainerService.HintSize="433.6,412.8" sap2010:WorkflowViewState.IdRef="If_6">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <ucas:DownloadStorageFile TimeoutMS="{x:Null}" Destination="tempdata\flag.png" DisplayName="Download Storage File" FolderPath="Main Demo Folder" sap:VirtualizedContainerService.HintSize="334.4,144" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="[flagname]" StorageBucketName="Countryreport" />
+                      <ucas:DownloadStorageFile TimeoutMS="{x:Null}" Destination="tempdata\flag.png" DisplayName="Download Storage File" FolderPath="Demo" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="[flagname]" StorageBucketName="Countryreport" />
                     </If.Then>
                   </If>
-                  <p:WordReplacePicture DisplayName="Replace Picture" sap:VirtualizedContainerService.HintSize="337.6,62.4" sap2010:WorkflowViewState.IdRef="WordReplacePicture_1" PictureAltText="countryflag" PicturePath="tempdata\flag.png">
+                  <p:WordReplacePicture DisplayName="Replace Picture" sap:VirtualizedContainerService.HintSize="433.6,139.2" sap2010:WorkflowViewState.IdRef="WordReplacePicture_1" PictureAltText="countryflag" PicturePath="tempdata\flag.png">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -159,7 +159,7 @@
                 </Sequence>
               </TryCatch.Try>
               <TryCatch.Catches>
-                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="403.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+                <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="499.2,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -174,7 +174,7 @@
                 </Catch>
               </TryCatch.Catches>
             </TryCatch>
-            <p:WordSetBookmarkContent BookmarkName="reportdate" BookmarkText="[&quot;Report date: &quot; + DateTime.Now.ToString(&quot;yyyy/MM/dd&quot;)]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_2">
+            <p:WordSetBookmarkContent BookmarkName="reportdate" BookmarkText="[&quot;Report date: &quot; + DateTime.Now.ToString(&quot;yyyy/MM/dd&quot;)]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -182,28 +182,28 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </p:WordSetBookmarkContent>
-            <p:WordSetBookmarkContent BookmarkName="employed" BookmarkText="[&quot;Employed : &quot; + employed + &quot;  million people&quot;]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_3" />
-            <p:WordSetBookmarkContent BookmarkName="Capital" BookmarkText="[&quot;Capital: &quot; + capital]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_4" />
-            <p:WordSetBookmarkContent BookmarkName="confidence" BookmarkText="[&quot;Data confidence &quot; + dataConfidenceLevel]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_7" />
-            <p:WordSetBookmarkContent BookmarkName="Overview" BookmarkText="[overview]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_5" />
-            <p:WordSetBookmarkContent BookmarkName="EconomicReport" BookmarkText="[economic]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_6" />
-            <p:WordSetBookmarkContent BookmarkName="headline1" BookmarkText="[headline1]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_8" />
-            <p:WordSetBookmarkContent BookmarkName="headline2" BookmarkText="[headline2]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_9" />
-            <p:WordSetBookmarkContent BookmarkName="headline3" BookmarkText="[headline3]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="436.8,148.8" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_10" />
-            <p:WordExportToPdf DisplayName="Export to PDF" FilePath="[&quot;tempdata\&quot; + country + &quot;_report.pdf&quot;]" sap:VirtualizedContainerService.HintSize="436.8,120.8" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
+            <p:WordSetBookmarkContent BookmarkName="employed" BookmarkText="[&quot;Employed : &quot; + employed + &quot;  million people&quot;]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_3" />
+            <p:WordSetBookmarkContent BookmarkName="Capital" BookmarkText="[&quot;Capital: &quot; + capital]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_4" />
+            <p:WordSetBookmarkContent BookmarkName="confidence" BookmarkText="[&quot;Data confidence &quot; + dataConfidenceLevel]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_7" />
+            <p:WordSetBookmarkContent BookmarkName="Overview" BookmarkText="[overview]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_5" />
+            <p:WordSetBookmarkContent BookmarkName="EconomicReport" BookmarkText="[economic]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_6" />
+            <p:WordSetBookmarkContent BookmarkName="headline1" BookmarkText="[headline1]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_8" />
+            <p:WordSetBookmarkContent BookmarkName="headline2" BookmarkText="[headline2]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_9" />
+            <p:WordSetBookmarkContent BookmarkName="headline3" BookmarkText="[headline3]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_10" />
+            <p:WordExportToPdf DisplayName="Export to PDF" FilePath="[&quot;tempdata\&quot; + country + &quot;_report.pdf&quot;]" sap:VirtualizedContainerService.HintSize="532.8,111.2" sap2010:WorkflowViewState.IdRef="WordExportToPdf_1" />
           </Sequence>
         </ActivityAction>
       </p:WordApplicationScope.Body>
     </p:WordApplicationScope>
-    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="512,259.2" sap2010:WorkflowViewState.IdRef="CommentOut_4">
+    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="628.8,278.4" sap2010:WorkflowViewState.IdRef="CommentOut_4">
       <ui:CommentOut.Body>
-        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="375.2,180.8" sap2010:WorkflowViewState.IdRef="Sequence_32">
+        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="400,200" sap2010:WorkflowViewState.IdRef="Sequence_32">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[currentDir + &quot;\tempdata\&quot; +country + &quot;_report.pdf&quot;]" DisplayName="Start Process" FileName="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe" sap:VirtualizedContainerService.HintSize="333.6,88" sap2010:WorkflowViewState.IdRef="StartProcess_2">
+          <ui:StartProcess WorkingDirectory="{x:Null}" Arguments="[currentDir + &quot;\tempdata\&quot; +country + &quot;_report.pdf&quot;]" DisplayName="Start Process" FileName="C:\Program Files (x86)\Adobe\Acrobat Reader DC\Reader\AcroRd32.exe" sap:VirtualizedContainerService.HintSize="337.6,88" sap2010:WorkflowViewState.IdRef="StartProcess_2">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
