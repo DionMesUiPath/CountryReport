@@ -4,7 +4,7 @@
     <x:Property Name="flagname" Type="InOutArgument(x:String)" />
     <x:Property Name="country" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1114.4,1192</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>818.4,1176.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="74">
@@ -111,7 +111,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Wiki flag" sap:VirtualizedContainerService.HintSize="582.4,1127.2" sap2010:WorkflowViewState.IdRef="Sequence_63">
+  <Sequence DisplayName="Wiki flag" sap:VirtualizedContainerService.HintSize="609.6,1112" sap2010:WorkflowViewState.IdRef="Sequence_63">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="flagurl" />
     </Sequence.Variables>
@@ -120,7 +120,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="520,882.4" sap2010:WorkflowViewState.IdRef="TryCatch_10">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="547.2,867.2" sap2010:WorkflowViewState.IdRef="TryCatch_10">
       <TryCatch.Try>
         <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Portugal - Wikipedia" sap:VirtualizedContainerService.HintSize="483.2,651.2" sap2010:WorkflowViewState.IdRef="NApplicationCard_7" InteractionMode="DebuggerApi" ScopeGuid="9a54b449-aec9-42b7-904f-27ac1e96a267" Version="V1" WindowResize="Maximize">
           <uix:NApplicationCard.Body>
@@ -174,7 +174,7 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="486.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_10">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="513.6,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_10">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -185,7 +185,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Sequence sap:VirtualizedContainerService.HintSize="496,302.4" sap2010:WorkflowViewState.IdRef="Sequence_67">
+            <Sequence sap:VirtualizedContainerService.HintSize="496,304.8" sap2010:WorkflowViewState.IdRef="Sequence_67">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -221,7 +221,7 @@
         </Catch>
       </TryCatch.Catches>
       <TryCatch.Finally>
-        <If Condition="[humanInTheLoop]" sap:VirtualizedContainerService.HintSize="510.4,604" sap2010:WorkflowViewState.IdRef="If_9">
+        <If Condition="[humanInTheLoop]" sap:VirtualizedContainerService.HintSize="510.4,636" sap2010:WorkflowViewState.IdRef="If_9">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -243,7 +243,7 @@
                   <InArgument x:TypeArguments="x:String">["flag" + Guid.NewGuid.ToString + ".png"]</InArgument>
                 </Assign.Value>
               </Assign>
-              <ucas:UploadStorageFile FileResource="{x:Null}" TimeoutMS="{x:Null}" Destination="[flagname]" DisplayName="Upload Storage File" FolderPath="Demo" sap:VirtualizedContainerService.HintSize="433.6,241.6" sap2010:WorkflowViewState.IdRef="UploadStorageFile_4" Path="tempdata\flag.png" StorageBucketName="Countryreport" />
+              <ucas:UploadStorageFile FileResource="{x:Null}" TimeoutMS="{x:Null}" Destination="[flagname]" DisplayName="Upload Storage File" sap:VirtualizedContainerService.HintSize="433.6,241.6" sap2010:WorkflowViewState.IdRef="UploadStorageFile_4" Path="tempdata\flag.png" StorageBucketName="Countryreport" />
             </Sequence>
           </If.Then>
           <If.Else>

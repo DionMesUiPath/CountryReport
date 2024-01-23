@@ -12,7 +12,7 @@
     <x:Property Name="flagname" Type="InArgument(x:String)" />
     <x:Property Name="employed" Type="InArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>708,4064.8</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>818.4,4064.8</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="48">
@@ -142,7 +142,7 @@
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
                     <If.Then>
-                      <ucas:DownloadStorageFile ContinueOnError="{x:Null}" Destination="tempdata\flag.png" DisplayName="Download Storage File" FolderPath="Demo" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="[flagname]" Result="{x:Null}" StorageBucketName="Countryreport" TimeoutMS="{x:Null}" />
+                      <ucas:DownloadStorageFile TimeoutMS="{x:Null}" Destination="tempdata\flag.png" DisplayName="Download Storage File" sap:VirtualizedContainerService.HintSize="334.4,134.4" sap2010:WorkflowViewState.IdRef="DownloadStorageFile_1" Path="[flagname]" StorageBucketName="Countryreport" />
                     </If.Then>
                     <If.Else>
                       <Sequence DisplayName="" sap2010:WorkflowViewState.IdRef="Sequence_58" />
@@ -194,16 +194,7 @@
                 </Sequence>
               </ui:CommentOut.Body>
             </ui:CommentOut>
-            <p:WordSetBookmarkContent BookmarkName="employed" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_11">
-              <p:WordSetBookmarkContent.BookmarkText>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String">
-                    <Literal.Result>
-                      <OutArgument x:TypeArguments="x:String" />
-                    </Literal.Result></Literal>
-                </InArgument>
-              </p:WordSetBookmarkContent.BookmarkText>
-            </p:WordSetBookmarkContent>
+            <p:WordSetBookmarkContent BookmarkName="employed" BookmarkText="[Nothing]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_11" />
             <p:WordSetBookmarkContent BookmarkName="Capital" BookmarkText="[&quot;Capital: &quot; + capital]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_4" />
             <p:WordSetBookmarkContent BookmarkName="confidence" BookmarkText="[&quot;Data confidence &quot; + dataConfidenceLevel]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_7" />
             <p:WordSetBookmarkContent BookmarkName="Overview" BookmarkText="[overview]" DisplayName="Set Bookmark Content" sap:VirtualizedContainerService.HintSize="532.8,139.2" sap2010:WorkflowViewState.IdRef="WordSetBookmarkContent_5" />
