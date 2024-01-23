@@ -1,9 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Geteconomicreport" this:Geteconomicreport.country="Portugal" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Geteconomicreport" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="country" Type="InArgument(x:String)" />
     <x:Property Name="economic" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1208,502.4</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1114.4,620</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="74">
@@ -51,106 +51,114 @@
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
     <scg:List x:TypeArguments="AssemblyReference" Capacity="64">
-      <AssemblyReference>System.Activities</AssemblyReference>
-      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
-      <AssemblyReference>mscorlib</AssemblyReference>
-      <AssemblyReference>System.Data</AssemblyReference>
-      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
-      <AssemblyReference>System</AssemblyReference>
-      <AssemblyReference>System.Drawing</AssemblyReference>
-      <AssemblyReference>System.Core</AssemblyReference>
-      <AssemblyReference>System.Xml</AssemblyReference>
-      <AssemblyReference>System.Xml.Linq</AssemblyReference>
-      <AssemblyReference>PresentationFramework</AssemblyReference>
-      <AssemblyReference>WindowsBase</AssemblyReference>
-      <AssemblyReference>PresentationCore</AssemblyReference>
-      <AssemblyReference>System.Xaml</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
-      <AssemblyReference>System.ValueTuple</AssemblyReference>
-      <AssemblyReference>System.ServiceModel</AssemblyReference>
-      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
-      <AssemblyReference>Microsoft.Office.Interop.Word</AssemblyReference>
-      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.Excel</AssemblyReference>
-      <AssemblyReference>UiPath.Mail</AssemblyReference>
-      <AssemblyReference>UiPath.CV</AssemblyReference>
-      <AssemblyReference>UiPath.Word</AssemblyReference>
-      <AssemblyReference>System.Memory</AssemblyReference>
-      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Web</AssemblyReference>
-      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Form.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>Microsoft.Bcl.AsyncInterfaces</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
-      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Excel.Activities</AssemblyReference>
-      <AssemblyReference>UiPath.Callout.Activity</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
-      <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>UiPath.Workflow</AssemblyReference>
-      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
-      <AssemblyReference>System.Data.Common</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
-      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
-      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
+      <AssemblyReference>Microsoft.Office.Interop.Word</AssemblyReference>
+      <AssemblyReference>Microsoft.VisualBasic</AssemblyReference>
       <AssemblyReference>Microsoft.Win32.Primitives</AssemblyReference>
+      <AssemblyReference>mscorlib</AssemblyReference>
+      <AssemblyReference>PresentationCore</AssemblyReference>
+      <AssemblyReference>PresentationFramework</AssemblyReference>
+      <AssemblyReference>System</AssemblyReference>
+      <AssemblyReference>System.Activities</AssemblyReference>
+      <AssemblyReference>System.Collections</AssemblyReference>
       <AssemblyReference>System.ComponentModel</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.EventBasedAsync</AssemblyReference>
       <AssemblyReference>System.ComponentModel.Primitives</AssemblyReference>
-      <AssemblyReference>System.ObjectModel</AssemblyReference>
-      <AssemblyReference>System.Memory.Data</AssemblyReference>
-      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.ComponentModel.TypeConverter</AssemblyReference>
       <AssemblyReference>System.Configuration.ConfigurationManager</AssemblyReference>
-      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.Console</AssemblyReference>
+      <AssemblyReference>System.Core</AssemblyReference>
+      <AssemblyReference>System.Data</AssemblyReference>
+      <AssemblyReference>System.Data.Common</AssemblyReference>
+      <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
+      <AssemblyReference>System.Data.SqlClient</AssemblyReference>
+      <AssemblyReference>System.Drawing</AssemblyReference>
+      <AssemblyReference>System.Linq</AssemblyReference>
+      <AssemblyReference>System.Memory</AssemblyReference>
+      <AssemblyReference>System.Memory.Data</AssemblyReference>
+      <AssemblyReference>System.ObjectModel</AssemblyReference>
+      <AssemblyReference>System.Private.CoreLib</AssemblyReference>
       <AssemblyReference>System.Private.Uri</AssemblyReference>
       <AssemblyReference>System.Private.Xml</AssemblyReference>
-      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
       <AssemblyReference>System.Runtime.Serialization</AssemblyReference>
+      <AssemblyReference>System.Security.Permissions</AssemblyReference>
+      <AssemblyReference>System.ServiceModel</AssemblyReference>
       <AssemblyReference>System.ServiceModel.Activities</AssemblyReference>
+      <AssemblyReference>System.ValueTuple</AssemblyReference>
+      <AssemblyReference>System.Xaml</AssemblyReference>
+      <AssemblyReference>System.Xml</AssemblyReference>
+      <AssemblyReference>System.Xml.Linq</AssemblyReference>
+      <AssemblyReference>UiPath.CV</AssemblyReference>
+      <AssemblyReference>UiPath.Mail</AssemblyReference>
+      <AssemblyReference>UiPath.Mail.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.OCR.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.Persistence.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Platform</AssemblyReference>
+      <AssemblyReference>UiPath.Studio.Constants</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>UiPath.UiAutomation.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
+      <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Web</AssemblyReference>
+      <AssemblyReference>UiPath.Web.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Word</AssemblyReference>
+      <AssemblyReference>UiPath.Word.Activities</AssemblyReference>
+      <AssemblyReference>UiPath.Workflow</AssemblyReference>
+      <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get economic report" sap:VirtualizedContainerService.HintSize="496,437.6" sap2010:WorkflowViewState.IdRef="Sequence_22">
+  <Sequence DisplayName="Get economic report" sap:VirtualizedContainerService.HintSize="574.4,536" sap2010:WorkflowViewState.IdRef="Sequence_22">
+    <Sequence.Variables>
+      <Variable x:TypeArguments="x:String" Name="economic_raw" />
+    </Sequence.Variables>
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="433.6,314.4" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="512,291.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Finland Economy, Politics and GDP Growth Summary - The Economist Intelligence Un" sap:VirtualizedContainerService.HintSize="431.2,62.4" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6e2e5559-000e-4902-867b-db0a9cdbe87d" Version="V2">
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Finland Economy, Politics and GDP Growth Summary - The Economist Intelligence Un" sap:VirtualizedContainerService.HintSize="528,300" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" InteractionMode="DebuggerApi" ScopeGuid="6e2e5559-000e-4902-867b-db0a9cdbe87d" Version="V2">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="400,292" sap2010:WorkflowViewState.IdRef="Sequence_44">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,391.2" sap2010:WorkflowViewState.IdRef="Sequence_44">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                    <x:Boolean x:Key="IsPinned">False</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NGetText DisplayName="Get Text 'In brief'" sap:VirtualizedContainerService.HintSize="337.6,167.2" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="6e2e5559-000e-4902-867b-db0a9cdbe87d" TextString="[economic]" Version="V3">
+                <uix:NGetText DisplayName="Get Text 'In brief'" sap:VirtualizedContainerService.HintSize="433.6,157.6" sap2010:WorkflowViewState.IdRef="NGetText_1" ScopeIdentifier="6e2e5559-000e-4902-867b-db0a9cdbe87d" TextString="[economic_raw]" Version="V3">
                   <uix:NGetText.Target>
-                    <uix:TargetAnchorable BrowserURL="https://country.eiu.com/portugal" DesignTimeRectangle="684, 557, 438, 293" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'The ruling'" FullSelectorArgument="&lt;webctrl tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='P' type='' class='' /&gt;" Guid="6c830b7d-2b0d-469f-91cf-e6771ab343b9" ImageBase64="" InformativeScreenshot="46c48cf7cc36d2a56c54920a33441b2c.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portugal Economy, Politics and GDP Growth Summary - The Economist Intelligence Unit' /&gt;" SearchSteps="Selector, FuzzySelector" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable BrowserURL="https://country.eiu.com/panama" DesignTimeRectangle="684, 445, 438, 450" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'The president,'" FullSelectorArgument="&lt;webctrl isleaf='1' tag='P' /&gt;" FuzzySelectorArgument="&lt;webctrl isleaf='1' tag='P' type='' class='' /&gt;" Guid="b171ea55-58cc-41a7-a5fe-180f8325885d" InformativeScreenshot="bf0c9a6aa03f9ac56c7c2724d0ff504e.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Panama Economy, Politics and GDP Growth Summary - The Economist Intelligence Unit' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
-                        <scg:List x:TypeArguments="uix:ITarget" Capacity="2">
-                          <uix:Target DesignTimeRectangle="684, 518, 438, 23" ElementType="Text" FriendlyName="'In brief'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='' aaname='In brief' check:innerText='In brief' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAbCAYAAAAKwEp6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHESURBVHhe7dq9ccIwAIDRLJdN0qfOHTukoGEAFuDoGYE02YHLFApgK7ZskQBJ+JHeu1OBAFlU31n4IQBAwYQOgKIJHQBFEzoAiiZ0ABRN6AAo2kVC97F8Di9Pj+F1uWlnrmkTVpPH/X6a8RxWt7AtAP5FL3QxANPw3s78lb8LXdzj+XF6n4kbQE3uLHS/9X+/EYDbVFno3sJ8f1wpdAC1+DF0aaRiKJoxXzef+UmyxmYRXntrjOPXj1HcU7xWfJ07ekz3NorZetp7Lw5HmAClOz50s+k2UPG974IzlqwxWYSPwXwazC5089lw/UPXbb7TRTP/W9KIAlCDo0N3aP6Yu7qvNXqRa7ThSea7O7Px2vnQNQ+YDOLV3sEdiqjQAdThxKPLzjmhGx9T5p6C/C5GudDlYrkVj0hnb+3EjtAB1Ob+Qzf4z280hA6gauWEbnQsmiN0ALW5cuhy1zwxdCfFS+gAanPd0J38P1oudPGu8Ji9CB1AbS4aunSdfLTOCV33ncH87slL/9EBVO2iodt9Nt59NSMXnHNC10jX3o4kcjtCB1CbXugAoDxCB0DRhA6AogkdAEUTOgCKJnQAFE3oAChYCJ8VkCO0tb4GpAAAAABJRU5ErkJggg==" SearchSteps="Selector, FuzzySelector" />
-                          <uix:Target DesignTimeRectangle="1201, 518, 345, 75" ElementType="Text" FriendlyName="'Forecast updates'" FullSelectorArgument="&lt;webctrl id='forecast' tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl id='forecast' tag='H2' type='' class='' aaname='Forecast updates' check:innerText='Forecast updates' /&gt;" ImageBase64="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" SearchSteps="FuzzySelector, Image" />
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
+                          <uix:Target DesignTimeRectangle="684, 406, 438, 23" ElementType="Text" FriendlyName="'In brief'" FullSelectorArgument="&lt;webctrl tag='H2' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='H2' type='' class='' aaname='In brief' check:innerText='In brief' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAboAAAAbCAYAAAAKwEp6AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAAHESURBVHhe7dq9ccIwAIDRLJdN0qfOHTukoGEAFuDoGYE02YHLFApgK7ZskQBJ+JHeu1OBAFlU31n4IQBAwYQOgKIJHQBFEzoAiiZ0ABRN6AAo2kVC97F8Di9Pj+F1uWlnrmkTVpPH/X6a8RxWt7AtAP5FL3QxANPw3s78lb8LXdzj+XF6n4kbQE3uLHS/9X+/EYDbVFno3sJ8f1wpdAC1+DF0aaRiKJoxXzef+UmyxmYRXntrjOPXj1HcU7xWfJ07ekz3NorZetp7Lw5HmAClOz50s+k2UPG974IzlqwxWYSPwXwazC5089lw/UPXbb7TRTP/W9KIAlCDo0N3aP6Yu7qvNXqRa7ThSea7O7Px2vnQNQ+YDOLV3sEdiqjQAdThxKPLzjmhGx9T5p6C/C5GudDlYrkVj0hnb+3EjtAB1Ob+Qzf4z280hA6gauWEbnQsmiN0ALW5cuhy1zwxdCfFS+gAanPd0J38P1oudPGu8Ji9CB1AbS4aunSdfLTOCV33ncH87slL/9EBVO2iodt9Nt59NSMXnHNC10jX3o4kcjtCB1CbXugAoDxCB0DRhA6AogkdAEUTOgCKJnQAFE3oAChYCJ8VkCO0tb4GpAAAAABJRU5ErkJggg==" SearchSteps="FuzzySelector, Image" />
                         </scg:List>
                       </uix:TargetAnchorable.Anchors>
                     </uix:TargetAnchorable>
                   </uix:NGetText.Target>
                 </uix:NGetText>
+                <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_3">
+                  <Assign.To>
+                    <OutArgument x:TypeArguments="x:String">[economic]</OutArgument>
+                  </Assign.To>
+                  <Assign.Value>
+                    <InArgument x:TypeArguments="x:String">[economic_raw.Substring(0, 300) + " .... "]</InArgument>
+                  </Assign.Value>
+                </Assign>
               </Sequence>
             </ActivityAction>
           </uix:NApplicationCard.Body>
           <uix:NApplicationCard.TargetApp>
-            <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAALUlEQVRIS+3NoREAMAwDMfOy7L9dFukIRmH6E//svFMGlUFlUBlUBlUkSUryAc0OAB+d3OhlAAAAAElFTkSuQmCC" InformativeScreenshot="896e20d5f542ecdd71bea4d0c2bd7553.jpg" Selector="&lt;html app='chrome.exe' title='Finland Economy, Politics and GDP Growth Summary - The Economist Intelligence Unit' /&gt;" Url="[&quot;https://country.eiu.com/&quot; + country.ToLower]" />
+            <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAIAAAD8GO2jAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAAALUlEQVRIS+3NoREAMAwDMfOy7L9dFukIRmH6E//svFMGlUFlUBlUBlUkSUryAc0OAB+d3OhlAAAAAElFTkSuQmCC" InformativeScreenshot="896e20d5f542ecdd71bea4d0c2bd7553.jpg" Selector="&lt;html app='chrome.exe' title='Finland Economy, Politics and GDP Growth Summary - The Economist Intelligence Unit' /&gt;" Title="Finland Economy, Politics and GDP Growth Summary - The Economist Intelligence Unit" Url="[&quot;https://country.eiu.com/&quot; + country.ToLower]" />
           </uix:NApplicationCard.TargetApp>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -161,10 +169,10 @@
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="400,140" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="478.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
@@ -172,7 +180,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Assign sap:VirtualizedContainerService.HintSize="262.4,69.6" sap2010:WorkflowViewState.IdRef="Assign_1">
+            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_1">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[economic]</OutArgument>
               </Assign.To>
@@ -184,5 +192,6 @@
         </Catch>
       </TryCatch.Catches>
     </TryCatch>
+    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="512,92.8" sap2010:WorkflowViewState.IdRef="LogMessage_1" Level="Info" Message="[&quot;Economic report : &quot; + economic]" />
   </Sequence>
 </Activity>

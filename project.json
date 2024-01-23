@@ -1,20 +1,24 @@
 {
   "name": "Countryreport",
+  "projectId": "63767c81-1ab0-4701-aab9-be656b301d61",
   "description": "A UiPath demo project for creating a country report with Action Center in the loop.\r\n\r\nAccepts two Arguments:\r\ncountry - The country to create the report about\r\nhumanInTheLoop - Enable the Action Center task",
   "main": "Main.xaml",
   "dependencies": {
-    "UiPath.Mail.Activities": "[1.18.2]",
-    "UiPath.Persistence.Activities": "[1.4.2]",
-    "UiPath.System.Activities": "[22.10.5]",
-    "UiPath.UIAutomation.Activities": "[23.4.3]",
-    "UiPath.WebAPI.Activities": "[1.16.2]",
-    "UiPath.Word.Activities": "[1.16.0]"
+    "UiPath.Form.Activities": "[23.10.5]",
+    "UiPath.FormActivityLibrary": "[2.0.7]",
+    "UiPath.Mail.Activities": "[1.21.1]",
+    "UiPath.Persistence.Activities": "[1.4.8]",
+    "UiPath.System.Activities": "[23.10.3]",
+    "UiPath.Testing.Activities": "[23.10.0]",
+    "UiPath.UIAutomation.Activities": "[23.10.8]",
+    "UiPath.WebAPI.Activities": "[1.18.0]",
+    "UiPath.Word.Activities": "[1.18.1]"
   },
   "webServices": [],
   "entitiesStores": [],
   "schemaVersion": "4.0",
   "studioVersion": "22.10.3.0",
-  "projectVersion": "1.0.46",
+  "projectVersion": "1.0.50",
   "runtimeOptions": {
     "autoDispose": false,
     "netFrameworkLazyLoading": false,
@@ -28,10 +32,10 @@
       "*password*"
     ],
     "executionType": "Workflow",
-    "readyForPiP": false,
+    "readyForPiP": true,
     "startsInPiP": false,
     "mustRestoreAllDependencies": true,
-    "pipType": "ChildSession"
+    "pipType": "SecondaryDesktop"
   },
   "designOptions": {
     "projectProfile": "Developement",
@@ -44,7 +48,8 @@
       "ignoredFiles": []
     },
     "fileInfoCollection": [],
-    "modernBehavior": true
+    "modernBehavior": true,
+    "saveToCloud": false
   },
   "expressionLanguage": "VisualBasic",
   "entryPoints": [

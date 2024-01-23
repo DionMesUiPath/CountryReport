@@ -27,5 +27,6 @@
   "UiPath.UIAutomationNext.Activities.Logging.SearchPerformanceLog": "False",
   "UiPath.UIAutomationNext.Activities.Logging.AuditLogLevel": "Trace",
   "UiPath.UIAutomationNext.Activities.ApplicationCard.OpenBrowserTimeoutSeconds": "60",
-  "UiPath.UIAutomationNext.Activities.InjectJs.InjectJsExecutionWorld": "Isolated"
+  "UiPath.UIAutomationNext.Activities.InjectJs.InjectJsExecutionWorld": "Isolated",
+  "UiPath.UIAutomationNext.Activities.Generic.WaitPrimaryUntilTimeout": "False"
 }
