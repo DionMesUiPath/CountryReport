@@ -7,7 +7,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1114.4,2291.2</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>818.4,2291.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Main_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="94">
@@ -131,9 +131,8 @@
       <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="// Report format :  0 = country , 1 = capital, 2 = population, 3 = safety, 4 = economic&#xD;&#xA;To run demo &#xD;&#xA;- Create bucket in the folder you run the automation :  Countryreport&#xA;- Create task catalog  in the folder you run the automation  : Report approval&#xD;&#xA;&#xD;&#xA;*Remember to set or fill email argument of Main..xml with your default value &#xD;&#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="790.4,2226.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="// Report format :  0 = country , 1 = capital, 2 = population, 3 = safety, 4 = economic&#xA;To run demo &#xA;- Create bucket in the folder you run the automation :  Countryreport&#xA;- Create task catalog  in the folder you run the automation  : Report approval&#xA;&#xA;*Remember to set or fill email argument of Main..xml with your default value &#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="790.4,2226.4" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
-      <Variable x:TypeArguments="x:String" Default="uipath@appsolem.nl" Name="email" />
       <Variable x:TypeArguments="x:String" Name="flagname" />
       <Variable x:TypeArguments="x:String" Default="Unknown" Name="dataConfidenceLevel" />
       <Variable x:TypeArguments="x:String" Default="Not found" Name="capital" />
@@ -360,7 +359,7 @@
                                                   <av:PointCollection x:Key="ConnectorLocation">450,1546.3999999999999 450,1638.4</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Sendreport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52.8" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Sendreport.xaml">
+                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Sendreport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="333.6,113.6" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Sendreport.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
                                                   <InArgument x:TypeArguments="x:String" x:Key="email">[email]</InArgument>
                                                   <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
