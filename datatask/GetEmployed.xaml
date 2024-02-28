@@ -1,9 +1,9 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Getpopulationfromworldometers" this:Getpopulationfromworldometers.country="Panama" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Getpopulationfromworldometers" this:Getpopulationfromworldometers.country="Portugal" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:s="clr-namespace:System;assembly=System.Private.CoreLib" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:this="clr-namespace:" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:uix="http://schemas.uipath.com/workflow/activities/uix" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <x:Members>
     <x:Property Name="country" Type="InArgument(x:String)" />
     <x:Property Name="employed" Type="OutArgument(x:String)" />
   </x:Members>
-  <sap:VirtualizedContainerService.HintSize>1114.4,693.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1116,1590</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ActivityBuilder_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="76">
@@ -114,7 +114,7 @@
       <AssemblyReference>WindowsBase</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Get population from worldometers" sap:VirtualizedContainerService.HintSize="574.4,628.8" sap2010:WorkflowViewState.IdRef="Sequence_18">
+  <Sequence DisplayName="Get population from worldometers" sap:VirtualizedContainerService.HintSize="707,1525" sap2010:WorkflowViewState.IdRef="Sequence_18">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:String" Name="tmpcountry" />
     </Sequence.Variables>
@@ -123,7 +123,7 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <If Condition="[country = &quot;US&quot;]" sap:VirtualizedContainerService.HintSize="512,52.8" sap2010:WorkflowViewState.IdRef="If_2">
+    <If Condition="[country = &quot;US&quot;]" sap:VirtualizedContainerService.HintSize="645,52" sap2010:WorkflowViewState.IdRef="If_2">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -151,40 +151,40 @@
         </Assign>
       </If.Else>
     </If>
-    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="512,291.2" sap2010:WorkflowViewState.IdRef="TryCatch_1">
+    <TryCatch DisplayName="Try Catch" sap:VirtualizedContainerService.HintSize="645,1189" sap2010:WorkflowViewState.IdRef="TryCatch_1">
       <TryCatch.Try>
-        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="Use Browser Chrome: Netherlands Employment, million people, June, 2022 - data, chart | TheGlobalEcon" sap:VirtualizedContainerService.HintSize="606.4,884" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" ScopeGuid="8803b584-71cc-4b57-983d-86163ffb0f88" Version="V1" WindowResize="Maximize">
+        <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Never" DisplayName="Use Browser Chrome: Netherlands Employment, million people, June, 2022 - data, chart | TheGlobalEcon" sap:VirtualizedContainerService.HintSize="607,961" sap2010:WorkflowViewState.IdRef="NApplicationCard_6" InteractionMode="DebuggerApi" ScopeGuid="8803b584-71cc-4b57-983d-86163ffb0f88" Version="V1" WindowResize="Maximize">
           <uix:NApplicationCard.Body>
             <ActivityAction x:TypeArguments="x:Object">
               <ActivityAction.Argument>
                 <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
               </ActivityAction.Argument>
-              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572.8,667.2" sap2010:WorkflowViewState.IdRef="Sequence_70">
+              <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="572,664" sap2010:WorkflowViewState.IdRef="Sequence_70">
                 <sap:WorkflowViewStateService.ViewState>
                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                     <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   </scg:Dictionary>
                 </sap:WorkflowViewStateService.ViewState>
-                <uix:NGetText DisplayName="Get Text 'Latest value'" sap:VirtualizedContainerService.HintSize="510.4,157.6" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="8803b584-71cc-4b57-983d-86163ffb0f88" TextString="[employed]" Version="V3">
+                <uix:NGetText DisplayName="Get Text 'Latest value'" sap:VirtualizedContainerService.HintSize="510,157" sap2010:WorkflowViewState.IdRef="NGetText_3" ScopeIdentifier="8803b584-71cc-4b57-983d-86163ffb0f88" TextString="[employed]" Version="V3">
                   <uix:NGetText.Target>
-                    <uix:TargetAnchorable BrowserURL="https://www.theglobaleconomy.com/Netherlands/employed_persons/" DesignTimeRectangle="1056, 540, 601, 38" DesignTimeScaleFactor="1.25" ElementType="Text" FriendlyName="'9.54'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl aaname='9.54' tableRow='2' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='' /&gt;" Guid="d72a1fde-f792-4352-a393-a0f25ffd0e87" InformativeScreenshot="cc8b2b8ca8cd8ae4c29bd9c47eb9c753.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Netherlands Employment, million people, June, 2022 - data, chart | TheGlobalEconomy.com' /&gt;" SearchSteps="FuzzySelector" Version="V1" Visibility="Interactive">
+                    <uix:TargetAnchorable BrowserURL="https://www.theglobaleconomy.com/Portugal/employed_persons/" DesignTimeRectangle="834, 452, 481, 30" DesignTimeScaleFactor="1" ElementType="Text" FriendlyName="'4.98'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableCol='2' tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' class='' tag='TD' /&gt;" Guid="6f5060f5-9505-4e42-ac88-f4cba8973c70" InformativeScreenshot="0cb5cc7f56018973d105f75a105c72f7.png" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Portugal Employment, million people, September, 2023 - data, chart | TheGlobalEconomy.com' /&gt;" SearchSteps="FuzzySelector" Version="V2" Visibility="Interactive">
                       <uix:TargetAnchorable.Anchors>
-                        <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                          <uix:Target DesignTimeRectangle="732, 540, 324, 38" ElementType="Text" FriendlyName="'Latest value'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TH' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TH' class='' aaname=' Latest value' check:innerText='Latest value' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAUgAAAAqCAYAAADRX8LWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAEnQAABJ0Ad5mH3gAAALLSURBVHhe7dlRbqJQFIBh12jSDTVuxS7FPs0q+tAVzOOEEblcLnAPg4q26XxfcpKqiBcSf2Fm1yR/fv8yxhhTjEAaY0wwAmmMMcHkQAIwJpAAAYEECAgkQEAgAQICCRAQSICAQAIEBBIgIJAAAYEECAgkQEAgAQLLgfw4Nvvdrtnt9s3xIz13p9Prrjm8pwdba9f7cmw+08NHao9j156b11N6BvhpnhjIz+b40kXlIYF8P3TBEkhgA59ve4G8lUDCT3ZqDu33Oz2quyqQQwDz5HikDxvN4fxskj8nTSU6OUiVbS6lL187z/6tkskgotXY9dvmGZ+D2XuCcxWFdHw8W/wAAZu5fJ83u4KsxDFNF6qFQM5ClKaI2CyO/aTorA5kXkd5PMPa8pVttKYi6rcHMj5XD/u3WeA6mway364WtUoYhhCsea6yTQ5YcRUaXB1O9evKAa28r98mf17lPNwcyNo6V64deJbNb7GTHK80S4HM+69PH7EcmTRDTAtrIzPZbhbMkWHN3dwfyOmxjKcIPvClLt/V9Hfd6kDWbqHT3BHI4b3B/m+6Citvs8u/08tntVv2bh4dyH+dZ+CZNgnkEJSFgCwG8powjK/q8r6uuE3t17Z/PXSfP3pPEeOF+N0dyHxegO9qk0DOv/SVyBRhG25ni9hV3tvFb/q4VdlXvrVfcZuaj2uyj1blmFf9ABT7rF4h99vldVb2vyLuwDOk7qRHdZOQzKf7kse3pOepBLKbFIgcjMkUsVhzyzvbT/7cmnItxT4uirjPZth2/qMwPb7JrNhu+AEAvtrlO57+rlsZyFYORjttDPJ7iyu60f4W4la5kppHcn6lOFvDgsWrtso6+33P/uNo9DmTuJ5fq283j6Q4wvezHEiA/5hAAgQEEiAgkAABgQQICCRAQCABAgIJEBBIgIBAAgQEEiAgkAABgQQICCRAVdP8Bf3Ph2fUtu8fAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
+                        <scg:List x:TypeArguments="uix:ITarget" Capacity="4">
+                          <uix:Target DesignTimeRectangle="575, 452, 259, 30" ElementType="Text" FriendlyName="'Latest value'" FullSelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl tableRow='2' tag='TD' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TABLE' /&gt;&lt;webctrl type='' tag='TD' class='' aaname=' Latest value' check:innerText='Latest value' /&gt;" ImageBase64="iVBORw0KGgoAAAANSUhEUgAAAQcAAAAiCAYAAABSvRyWAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIySURBVHhe7dhNcoQgEIZhb8ixPIpHcZVzeIIsUwSaHxtsNGNlNs77VHVVFAZx0d+QmXz28/1FURRVi3CgKMqsGg4AoBEOAEyEAwAT4QDARDgAMBEOAEyEAwAT4QDARDgAMA3CYfXzNPl5zZdPsM5+mubwZgD+4t/DYVucn9zit3x9zxvCiXAAXkI4ADDdDIfNL24KzVYqN500YL6nAmKd1Vy96LZ4V+6HSkPt2oc9HJo8zXdLfpreQ6j2vt6nWkP24XyZGibI+w/3ADzeei8c5HRQB9vm7E8O7bWem/7el4kNWhr27PndWNPYcUw1+SgQTsOhC5tDcADPJ32b/+6ch0MrzbXDoQuAKDamjKcxHSS78+fLSaQMxvUGE2Uvr4ZDE1JJfF4NC+DpYg+EvrwXDtJc5djtwkKjcEjr7HNLlebLAVHud58bPl81cGzcfV67nnM3wqF5N1XDzQDPUnrqRjh0x+7u+vLkMJSemda5CIe6bpynmrxv+lEgnIWDcXIAPkfqPflCzHc61+HQHOtrU8fe0uFwvJZ/CeS6f4YOkqtwyOuq5wrZS/vbgRkIEgD7+mmt9nP7umkvzXOAD3AaDvVIXao0eQ4EqdBhzW8AufH0N7OMl/mHb2w1ptKgfGbYlPrbviqBECuMrWpOd1rQe3LLEt5Xr9W9/1lKAQ81CAcAn45wAGAiHACYCAcAJsIBgIlwAGAiHACYCAcAJsIBgIlwAGAiHACYCAcAJsIBgMH7X98ZkkjBr18RAAAAAElFTkSuQmCC" SearchSteps="FuzzySelector, Image" />
                         </scg:List>
                       </uix:TargetAnchorable.Anchors>
                     </uix:TargetAnchorable>
                   </uix:NGetText.Target>
                 </uix:NGetText>
-                <If Condition="[employed = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="510.4,354.4" sap2010:WorkflowViewState.IdRef="If_3">
+                <If Condition="[employed = &quot;&quot;]" sap:VirtualizedContainerService.HintSize="510,352" sap2010:WorkflowViewState.IdRef="If_3">
                   <If.Then>
-                    <Sequence sap:VirtualizedContainerService.HintSize="476.8,171.2" sap2010:WorkflowViewState.IdRef="Sequence_71">
+                    <Sequence sap:VirtualizedContainerService.HintSize="476,170" sap2010:WorkflowViewState.IdRef="Sequence_71">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_21">
+                      <Assign sap:VirtualizedContainerService.HintSize="434,82" sap2010:WorkflowViewState.IdRef="Assign_21">
                         <Assign.To>
                           <OutArgument x:TypeArguments="x:String">[employed]</OutArgument>
                         </Assign.To>
@@ -206,14 +206,14 @@
           </uix:NApplicationCard.TargetApp>
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               <x:Boolean x:Key="IsPinned">False</x:Boolean>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
         </uix:NApplicationCard>
       </TryCatch.Try>
       <TryCatch.Catches>
-        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="478.4,22.4" sap2010:WorkflowViewState.IdRef="Catch`1_1">
+        <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="611,21" sap2010:WorkflowViewState.IdRef="Catch`1_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
               <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -224,7 +224,7 @@
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="s:Exception" Name="exception" />
             </ActivityAction.Argument>
-            <Assign sap:VirtualizedContainerService.HintSize="433.6,81.6" sap2010:WorkflowViewState.IdRef="Assign_20">
+            <Assign sap:VirtualizedContainerService.HintSize="434,81" sap2010:WorkflowViewState.IdRef="Assign_20">
               <Assign.To>
                 <OutArgument x:TypeArguments="x:String">[employed]</OutArgument>
               </Assign.To>
