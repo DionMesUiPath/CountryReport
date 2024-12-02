@@ -131,7 +131,7 @@
       <AssemblyReference>UiPath.Word.Activities.Design</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Flowchart sap2010:Annotation.AnnotationText="// Report format :  0 = country , 1 = capital, 2 = population, 3 = safety, 4 = economic&#xA;To run demo &#xA;- Create bucket in the folder you run the automation :  Countryreport&#xA;- Create task catalog  in the folder you run the automation  : Report approval&#xA;&#xA;*Remember to set or fill email argument of Main..xml with your default value &#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="791,2220" sap2010:WorkflowViewState.IdRef="Flowchart_1">
+  <Flowchart sap2010:Annotation.AnnotationText="// Report format :  0 = country , 1 = capital, 2 = population, 3 = safety, 4 = economic&#xA;To run demo &#xA;- Create bucket in the folder you run the automation :  Countryreport&#xA;- Create task catalog  in the folder you run the automation  : Report approval&#xA;&#xA;*Remember to set or fill email argument of Main..xml with your default value &#xA;" DisplayName="Process" sap:VirtualizedContainerService.HintSize="1149,650.04" sap2010:WorkflowViewState.IdRef="Flowchart_1">
     <Flowchart.Variables>
       <Variable x:TypeArguments="x:String" Name="flagname" />
       <Variable x:TypeArguments="x:String" Default="Unknown" Name="dataConfidenceLevel" />
@@ -154,9 +154,9 @@
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-        <av:Point x:Key="ShapeLocation">150,2.3999999999999986</av:Point>
-        <av:Size x:Key="ShapeSize">60,75</av:Size>
-        <av:PointCollection x:Key="ConnectorLocation">180,77.6 180,107.60000000000001 323.2,107.60000000000001 323.2,146.4</av:PointCollection>
+        <av:Point x:Key="ShapeLocation">365,55</av:Point>
+        <av:Size x:Key="ShapeSize">50,50</av:Size>
+        <av:PointCollection x:Key="ConnectorLocation">415,80 540,80 540,140</av:PointCollection>
         <x:Double x:Key="Height">2065.6</x:Double>
         <x:Double x:Key="Width">757.1999999999999</x:Double>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -165,26 +165,26 @@
     <Flowchart.StartNode>
       <x:Reference>__ReferenceID13</x:Reference>
     </Flowchart.StartNode>
-    <FlowDecision x:Name="__ReferenceID10" Condition="[country &lt;&gt; &quot;end&quot;]" DisplayName="Input not &quot;end&quot;" sap:VirtualizedContainerService.HintSize="88,87" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
+    <FlowDecision x:Name="__ReferenceID10" Condition="[country &lt;&gt; &quot;end&quot;]" DisplayName="Input not &quot;end&quot;" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_1">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">136.79999999999998,316.4</av:Point>
-          <av:Size x:Key="ShapeSize">88,87</av:Size>
-          <av:PointCollection x:Key="TrueConnector">136.79999999999998,360 100,360 100,493.6</av:PointCollection>
-          <av:PointCollection x:Key="FalseConnector">224.79999999999998,359.9 254.79999999999995,359.9 254.79999999999995,302 630,302 630,332</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">350,310</av:Point>
+          <av:Size x:Key="ShapeSize">60,60</av:Size>
+          <av:PointCollection x:Key="TrueConnector">350,340 330,340 330,395 360,395 360,425</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">410,340 440,340 440,295 920,295 920,325</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
       <FlowDecision.True>
         <FlowStep x:Name="__ReferenceID2" sap2010:WorkflowViewState.IdRef="FlowStep_1">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">0,493.6</av:Point>
-              <av:Size x:Key="ShapeSize">200,52</av:Size>
-              <av:PointCollection x:Key="ConnectorLocation">100,546.4 100,563.6</av:PointCollection>
+              <av:Point x:Key="ShapeLocation">305,425</av:Point>
+              <av:Size x:Key="ShapeSize">110,70</av:Size>
+              <av:PointCollection x:Key="ConnectorLocation">360,495 360,545</av:PointCollection>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Capital" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="datatask\Getcapital.xaml">
+          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get Capital" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_1" UnSafe="False" WorkflowFileName="datatask\Getcapital.xaml">
             <ui:InvokeWorkflowFile.Arguments>
               <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
               <OutArgument x:TypeArguments="x:String" x:Key="capital">[capital]</OutArgument>
@@ -194,12 +194,12 @@
             <FlowStep x:Name="__ReferenceID3" sap2010:WorkflowViewState.IdRef="FlowStep_2">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <av:Point x:Key="ShapeLocation">0,563.6</av:Point>
-                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                  <av:PointCollection x:Key="ConnectorLocation">100,616.4 100,633.6</av:PointCollection>
+                  <av:Point x:Key="ShapeLocation">305,545</av:Point>
+                  <av:Size x:Key="ShapeSize">110,70</av:Size>
+                  <av:PointCollection x:Key="ConnectorLocation">360,615 360,635</av:PointCollection>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetEmployed.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="datatask\GetEmployed.xaml">
+              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="GetEmployed.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_2" UnSafe="False" WorkflowFileName="datatask\GetEmployed.xaml">
                 <ui:InvokeWorkflowFile.Arguments>
                   <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
                   <OutArgument x:TypeArguments="x:String" x:Key="employed">[employed]</OutArgument>
@@ -209,12 +209,12 @@
                 <FlowStep x:Name="__ReferenceID4" sap2010:WorkflowViewState.IdRef="FlowStep_3">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:Point x:Key="ShapeLocation">0,633.6</av:Point>
-                      <av:Size x:Key="ShapeSize">200,52</av:Size>
-                      <av:PointCollection x:Key="ConnectorLocation">100,686.4 100,713.6</av:PointCollection>
+                      <av:Point x:Key="ShapeLocation">305,635</av:Point>
+                      <av:Size x:Key="ShapeSize">110,70</av:Size>
+                      <av:PointCollection x:Key="ConnectorLocation">360,705 360,735</av:PointCollection>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get overview" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="datatask\Getoverview.xaml">
+                  <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get overview" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_3" UnSafe="False" WorkflowFileName="datatask\Getoverview.xaml">
                     <ui:InvokeWorkflowFile.Arguments>
                       <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
                       <InOutArgument x:TypeArguments="x:String" x:Key="overview">[overview]</InOutArgument>
@@ -224,12 +224,12 @@
                     <FlowStep x:Name="__ReferenceID5" sap2010:WorkflowViewState.IdRef="FlowStep_4">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                          <av:Point x:Key="ShapeLocation">0,713.6</av:Point>
-                          <av:Size x:Key="ShapeSize">200,52</av:Size>
-                          <av:PointCollection x:Key="ConnectorLocation">100,766.4 100,783.6</av:PointCollection>
+                          <av:Point x:Key="ShapeLocation">305,735</av:Point>
+                          <av:Size x:Key="ShapeSize">110,70</av:Size>
+                          <av:PointCollection x:Key="ConnectorLocation">360,805 360,835</av:PointCollection>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get economicreport" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="datatask\Geteconomicreport.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get economicreport" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_4" UnSafe="False" WorkflowFileName="datatask\Geteconomicreport.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
                           <OutArgument x:TypeArguments="x:String" x:Key="economic">[economic]</OutArgument>
@@ -239,12 +239,12 @@
                         <FlowStep x:Name="__ReferenceID11" sap2010:WorkflowViewState.IdRef="FlowStep_5">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <av:Point x:Key="ShapeLocation">0,783.6</av:Point>
-                              <av:Size x:Key="ShapeSize">200,52</av:Size>
-                              <av:PointCollection x:Key="ConnectorLocation">100,836.4 100,853.6</av:PointCollection>
+                              <av:Point x:Key="ShapeLocation">305,835</av:Point>
+                              <av:Size x:Key="ShapeSize">110,70</av:Size>
+                              <av:PointCollection x:Key="ConnectorLocation">360,905 360,945</av:PointCollection>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
-                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get flag" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="datatask\Wikiflag.xaml">
+                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get flag" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_5" UnSafe="False" WorkflowFileName="datatask\Wikiflag.xaml">
                             <ui:InvokeWorkflowFile.Arguments>
                               <InArgument x:TypeArguments="x:Boolean" x:Key="humanInTheLoop">[humanInTheLoop]</InArgument>
                               <InOutArgument x:TypeArguments="x:String" x:Key="flagname">[flagname]</InOutArgument>
@@ -255,12 +255,12 @@
                             <FlowStep x:Name="__ReferenceID6" sap2010:WorkflowViewState.IdRef="FlowStep_6">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <av:Point x:Key="ShapeLocation">0,853.6</av:Point>
-                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                  <av:PointCollection x:Key="ConnectorLocation">100,906.4 100,936.4 300,936.4 300,1026.4</av:PointCollection>
+                                  <av:Point x:Key="ShapeLocation">305,945</av:Point>
+                                  <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                  <av:PointCollection x:Key="ConnectorLocation">360,1015 360,1038.1217457305474 592,1038.1217457305474 592,530.1217457305474 770,530.1217457305474 770,680</av:PointCollection>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get headlines" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="datatask\Getheadlines.xaml">
+                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Get headlines" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_6" UnSafe="False" WorkflowFileName="datatask\Getheadlines.xaml">
                                 <ui:InvokeWorkflowFile.Arguments>
                                   <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
                                   <OutArgument x:TypeArguments="x:String" x:Key="headline1">[headline1]</OutArgument>
@@ -269,26 +269,26 @@
                                 </ui:InvokeWorkflowFile.Arguments>
                               </ui:InvokeWorkflowFile>
                               <FlowStep.Next>
-                                <FlowDecision x:Name="__ReferenceID9" Condition="[humanInTheLoop]" DisplayName="Human in the Loop" sap:VirtualizedContainerService.HintSize="109,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
+                                <FlowDecision x:Name="__ReferenceID9" Condition="[humanInTheLoop]" DisplayName="Human in the Loop" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-                                      <av:Point x:Key="ShapeLocation">246.39999999999998,1026.4</av:Point>
-                                      <av:Size x:Key="ShapeSize">109,87</av:Size>
-                                      <av:PointCollection x:Key="TrueConnector">246.39999999999998,1070 150,1070 150,1158.4</av:PointCollection>
-                                      <av:PointCollection x:Key="FalseConnector">355.4,1069.9 450,1069.9 450,1353.6</av:PointCollection>
+                                      <av:Point x:Key="ShapeLocation">740,680</av:Point>
+                                      <av:Size x:Key="ShapeSize">60,60</av:Size>
+                                      <av:PointCollection x:Key="TrueConnector">740,710 670,710 670,835</av:PointCollection>
+                                      <av:PointCollection x:Key="FalseConnector">800,710 880,710 880,955</av:PointCollection>
                                     </scg:Dictionary>
                                   </sap:WorkflowViewStateService.ViewState>
                                   <FlowDecision.True>
                                     <FlowStep x:Name="__ReferenceID12" sap2010:WorkflowViewState.IdRef="FlowStep_7">
                                       <sap:WorkflowViewStateService.ViewState>
                                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                          <av:Point x:Key="ShapeLocation">50,1158.4</av:Point>
-                                          <av:Size x:Key="ShapeSize">200,81</av:Size>
-                                          <av:PointCollection x:Key="ConnectorLocation">150,1239.4 150,1380.1 350,1380.1</av:PointCollection>
+                                          <av:Point x:Key="ShapeLocation">615,835</av:Point>
+                                          <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                          <av:PointCollection x:Key="ConnectorLocation">670,905 670,990 825,990</av:PointCollection>
                                         </scg:Dictionary>
                                       </sap:WorkflowViewStateService.ViewState>
-                                      <Sequence DisplayName="Report approval task" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_13">
+                                      <Sequence DisplayName="Report approval task" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_13">
                                         <Sequence.Variables>
                                           <Variable x:TypeArguments="upaf:FormTaskData" Name="report_task_object" />
                                         </Sequence.Variables>
@@ -297,7 +297,7 @@
                                             <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                           </scg:Dictionary>
                                         </sap:WorkflowViewStateService.ViewState>
-                                        <upaf:CreateFormTask BucketFolderPath="{x:Null}" BulkFormLayout="{x:Null}" DynamicFormPath="{x:Null}" ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" BucketName="Countryreport" BulkFormLayoutGuid="a4ce634a-b069-4343-b36f-74aa4e8d7e89" DisplayName="Create Form Task" EnableBulkEdit="False" EnableDynamicForms="False" EnableV2="False" FolderPath="Demo" FormLayout="%[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;html&quot;:&quot;&lt;h2&gt;&lt;strong&gt;Report approval check&lt;/strong&gt;&lt;/h2&gt;&quot;,&quot;label&quot;:&quot;Content&quot;,&quot;refreshOnChange&quot;:false,&quot;key&quot;:&quot;content&quot;,&quot;type&quot;:&quot;content&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;img src=\&quot;{{ data.flag_storage }}\&quot; style=\&quot;height:160px;width:320px;\&quot; /&gt;&lt;br&gt;&quot;,&quot;refreshOnChange&quot;:true,&quot;key&quot;:&quot;html&quot;,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;tableView&quot;:false,&quot;key&quot;:&quot;columns&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;label&quot;:&quot;Columns&quot;},{&quot;label&quot;:&quot;Country&quot;,&quot;disabled&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Country&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Capital&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;Capital&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false},{&quot;label&quot;:&quot;Population&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;Population&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false},{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Overview&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Overview&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:6,&quot;alwaysEnabled&quot;:false,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;Economy&quot;,&quot;alwaysEnabled&quot;:false,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Economy&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:6,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;tableView&quot;:false,&quot;key&quot;:&quot;columns1&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;label&quot;:&quot;Columns&quot;,&quot;alwaysEnabled&quot;:false,&quot;path&quot;:&quot;columns1&quot;},{&quot;label&quot;:&quot;Headline1&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;Headline1&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;hideOnChildrenHidden&quot;:false},{&quot;label&quot;:&quot;Headline2&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;Headline2&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false},{&quot;label&quot;:&quot;Headline3&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;Headline3&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false},{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Confidence level data&quot;,&quot;tableView&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;label&quot;:&quot;Absolute confidence&quot;,&quot;value&quot;:&quot;100%&quot;},{&quot;label&quot;:&quot;Positive confidence&quot;,&quot;value&quot;:&quot;75%&quot;},{&quot;label&quot;:&quot;50/50 confidence&quot;,&quot;value&quot;:&quot;50%&quot;},{&quot;label&quot;:&quot;Negative confidence&quot;,&quot;value&quot;:&quot;25%&quot;},{&quot;label&quot;:&quot;No confidence&quot;,&quot;value&quot;:&quot;0%&quot;}]},&quot;validate&quot;:{&quot;onlyAvailableItems&quot;:false},&quot;key&quot;:&quot;confidence&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false,&quot;keyModified&quot;:true}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns3&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;},{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Accept report&quot;,&quot;showValidations&quot;:false,&quot;block&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;tableView&quot;:false,&quot;key&quot;:&quot;acceptRepor&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;Deny report&quot;,&quot;showValidations&quot;:false,&quot;theme&quot;:&quot;danger&quot;,&quot;block&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;tableView&quot;:false,&quot;key&quot;:&quot;denyReport&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;tableView&quot;:false,&quot;key&quot;:&quot;columns2&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;label&quot;:&quot;Columns&quot;,&quot;alwaysEnabled&quot;:false,&quot;path&quot;:&quot;columns2&quot;},{&quot;label&quot;:&quot;flag_storage&quot;,&quot;hidden&quot;:true,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;flag_storage&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]" FormLayoutGuid="40fa6016-0c5a-4335-bc4a-71ed95fe3f95" GenerateInputFields="False" sap:VirtualizedContainerService.HintSize="387.2,372" sap2010:WorkflowViewState.IdRef="CreateFormTask_1" TaskCatalog="[&quot;Report approval&quot;]" TaskOutput="[report_task_object]" TaskPriority="[TaskPriority.Medium]" TaskTitle="Report approval">
+                                        <upaf:CreateFormTask BucketFolderPath="{x:Null}" BulkFormLayout="{x:Null}" DynamicFormPath="{x:Null}" ExternalTag="{x:Null}" Labels="{x:Null}" TimeoutMs="{x:Null}" BucketName="Countryreport" BulkFormLayoutGuid="002bb68d-0775-4444-bcd4-528c0a0c93c6" DisplayName="Create Form Task" EnableBulkEdit="False" EnableDynamicForms="False" EnableV2="False" FolderPath="Demo" FormLayout="%[{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;html&quot;:&quot;&lt;h2&gt;&lt;strong&gt;Report approval check&lt;/strong&gt;&lt;/h2&gt;&quot;,&quot;label&quot;:&quot;Content&quot;,&quot;refreshOnChange&quot;:false,&quot;key&quot;:&quot;content&quot;,&quot;type&quot;:&quot;content&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;HTML&quot;,&quot;attrs&quot;:[{&quot;attr&quot;:&quot;&quot;,&quot;value&quot;:&quot;&quot;}],&quot;content&quot;:&quot;&lt;img src=\&quot;{{ data.flag_storage }}\&quot; style=\&quot;height:160px;width:320px;\&quot; /&gt;&lt;br&gt;&quot;,&quot;refreshOnChange&quot;:true,&quot;key&quot;:&quot;html&quot;,&quot;type&quot;:&quot;htmlelement&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;tableView&quot;:false,&quot;key&quot;:&quot;columns&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;label&quot;:&quot;Columns&quot;},{&quot;label&quot;:&quot;Country&quot;,&quot;disabled&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Country&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true},{&quot;label&quot;:&quot;Capital&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;Capital&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false},{&quot;label&quot;:&quot;Population&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;Population&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false},{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Overview&quot;,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Overview&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:6,&quot;alwaysEnabled&quot;:false,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;Economy&quot;,&quot;alwaysEnabled&quot;:false,&quot;tableView&quot;:true,&quot;key&quot;:&quot;Economy&quot;,&quot;type&quot;:&quot;textarea&quot;,&quot;rows&quot;:6,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;tableView&quot;:false,&quot;key&quot;:&quot;columns1&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;label&quot;:&quot;Columns&quot;,&quot;alwaysEnabled&quot;:false,&quot;path&quot;:&quot;columns1&quot;},{&quot;label&quot;:&quot;Headline1&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;Headline1&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;hideOnChildrenHidden&quot;:false},{&quot;label&quot;:&quot;Headline2&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;Headline2&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false},{&quot;label&quot;:&quot;Headline3&quot;,&quot;tableView&quot;:true,&quot;type&quot;:&quot;textfield&quot;,&quot;key&quot;:&quot;Headline3&quot;,&quot;input&quot;:true,&quot;alwaysEnabled&quot;:false},{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Confidence level data&quot;,&quot;tableView&quot;:true,&quot;data&quot;:{&quot;values&quot;:[{&quot;label&quot;:&quot;Absolute confidence&quot;,&quot;value&quot;:&quot;100%&quot;},{&quot;label&quot;:&quot;Positive confidence&quot;,&quot;value&quot;:&quot;75%&quot;},{&quot;label&quot;:&quot;50/50 confidence&quot;,&quot;value&quot;:&quot;50%&quot;},{&quot;label&quot;:&quot;Negative confidence&quot;,&quot;value&quot;:&quot;25%&quot;},{&quot;label&quot;:&quot;No confidence&quot;,&quot;value&quot;:&quot;0%&quot;}]},&quot;validate&quot;:{&quot;onlyAvailableItems&quot;:false},&quot;key&quot;:&quot;confidence&quot;,&quot;type&quot;:&quot;select&quot;,&quot;indexeddb&quot;:{&quot;filter&quot;:{}},&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false,&quot;keyModified&quot;:true}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;key&quot;:&quot;columns3&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;tableView&quot;:false,&quot;label&quot;:&quot;Columns&quot;},{&quot;columns&quot;:[{&quot;components&quot;:[{&quot;label&quot;:&quot;Accept report&quot;,&quot;showValidations&quot;:false,&quot;block&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;tableView&quot;:false,&quot;key&quot;:&quot;acceptRepor&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;},{&quot;components&quot;:[{&quot;label&quot;:&quot;Deny report&quot;,&quot;showValidations&quot;:false,&quot;theme&quot;:&quot;danger&quot;,&quot;block&quot;:true,&quot;alwaysEnabled&quot;:false,&quot;tableView&quot;:false,&quot;key&quot;:&quot;denyReport&quot;,&quot;type&quot;:&quot;button&quot;,&quot;input&quot;:true,&quot;hideOnChildrenHidden&quot;:false}],&quot;width&quot;:6,&quot;offset&quot;:0,&quot;push&quot;:0,&quot;pull&quot;:0,&quot;size&quot;:&quot;md&quot;}],&quot;tableView&quot;:false,&quot;key&quot;:&quot;columns2&quot;,&quot;type&quot;:&quot;columns&quot;,&quot;input&quot;:false,&quot;label&quot;:&quot;Columns&quot;,&quot;alwaysEnabled&quot;:false,&quot;path&quot;:&quot;columns2&quot;},{&quot;label&quot;:&quot;flag_storage&quot;,&quot;hidden&quot;:true,&quot;disabled&quot;:true,&quot;tableView&quot;:true,&quot;key&quot;:&quot;flag_storage&quot;,&quot;type&quot;:&quot;textfield&quot;,&quot;input&quot;:true}]" FormLayoutGuid="596c0642-1372-41a2-9815-21a68e556f76" GenerateInputFields="False" sap:VirtualizedContainerService.HintSize="387.2,372" sap2010:WorkflowViewState.IdRef="CreateFormTask_1" TaskCatalog="[&quot;Report approval&quot;]" TaskOutput="[report_task_object]" TaskPriority="[TaskPriority.Medium]" TaskTitle="Report approval">
                                           <upaf:CreateFormTask.FormData>
                                             <InArgument x:TypeArguments="x:String" x:Key="Country">[country]</InArgument>
                                             <InOutArgument x:TypeArguments="x:String" x:Key="Capital">[capital]</InOutArgument>
@@ -330,12 +330,12 @@
                                         <FlowStep x:Name="__ReferenceID0" sap2010:WorkflowViewState.IdRef="FlowStep_8">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                              <av:Point x:Key="ShapeLocation">350,1353.6</av:Point>
-                                              <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                              <av:PointCollection x:Key="ConnectorLocation">450,1406.3999999999999 450,1493.6</av:PointCollection>
+                                              <av:Point x:Key="ShapeLocation">825,955</av:Point>
+                                              <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                              <av:PointCollection x:Key="ConnectorLocation">880,1025 880,1125</av:PointCollection>
                                             </scg:Dictionary>
                                           </sap:WorkflowViewStateService.ViewState>
-                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Createreport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Createreport.xaml">
+                                          <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Createreport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_8" UnSafe="False" WorkflowFileName="Createreport.xaml">
                                             <ui:InvokeWorkflowFile.Arguments>
                                               <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
                                               <InArgument x:TypeArguments="x:String" x:Key="capital">[capital]</InArgument>
@@ -354,12 +354,12 @@
                                             <FlowStep x:Name="__ReferenceID7" sap2010:WorkflowViewState.IdRef="FlowStep_9">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                  <av:Point x:Key="ShapeLocation">350,1493.6</av:Point>
-                                                  <av:Size x:Key="ShapeSize">200,52</av:Size>
-                                                  <av:PointCollection x:Key="ConnectorLocation">450,1546.3999999999999 450,1638.4</av:PointCollection>
+                                                  <av:Point x:Key="ShapeLocation">825,1125</av:Point>
+                                                  <av:Size x:Key="ShapeSize">110,70</av:Size>
+                                                  <av:PointCollection x:Key="ConnectorLocation">880,1195 880,1295</av:PointCollection>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Sendreport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="200,52" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Sendreport.xaml">
+                                              <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Sendreport.xaml - Invoke Workflow File" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_9" UnSafe="False" WorkflowFileName="Sendreport.xaml">
                                                 <ui:InvokeWorkflowFile.Arguments>
                                                   <InArgument x:TypeArguments="x:String" x:Key="email">[email]</InArgument>
                                                   <InArgument x:TypeArguments="x:String" x:Key="country">[country]</InArgument>
@@ -369,11 +369,11 @@
                                                 <FlowStep x:Name="__ReferenceID1" sap2010:WorkflowViewState.IdRef="FlowStep_10">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                                      <av:Point x:Key="ShapeLocation">350,1638.4</av:Point>
-                                                      <av:Size x:Key="ShapeSize">200,81</av:Size>
+                                                      <av:Point x:Key="ShapeLocation">825,1295</av:Point>
+                                                      <av:Size x:Key="ShapeSize">110,70</av:Size>
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
-                                                  <Sequence DisplayName="Delete temp data" sap:VirtualizedContainerService.HintSize="200,81" sap2010:WorkflowViewState.IdRef="Sequence_12">
+                                                  <Sequence DisplayName="Delete temp data" sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Sequence_12">
                                                     <sap:WorkflowViewStateService.ViewState>
                                                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -445,11 +445,11 @@
         <FlowStep x:Name="__ReferenceID8" sap2010:WorkflowViewState.IdRef="FlowStep_11">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:Point x:Key="ShapeLocation">530,332</av:Point>
-              <av:Size x:Key="ShapeSize">200,56</av:Size>
+              <av:Point x:Key="ShapeLocation">865,325</av:Point>
+              <av:Size x:Key="ShapeSize">110,70</av:Size>
             </scg:Dictionary>
           </sap:WorkflowViewStateService.ViewState>
-          <ui:Comment sap:VirtualizedContainerService.HintSize="200,56" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// End">
+          <ui:Comment sap:VirtualizedContainerService.HintSize="110,70" sap2010:WorkflowViewState.IdRef="Comment_2" Text="// End">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -469,14 +469,14 @@
     <x:Reference>__ReferenceID7</x:Reference>
     <x:Reference>__ReferenceID8</x:Reference>
     <x:Reference>__ReferenceID9</x:Reference>
-    <FlowDecision x:Name="__ReferenceID13" Condition="[not String.IsNullOrEmpty(country)]" DisplayName="Country filled in" sap:VirtualizedContainerService.HintSize="91,87" sap2010:WorkflowViewState.IdRef="FlowDecision_3" True="{x:Reference __ReferenceID10}" False="{x:Reference __ReferenceID8}">
+    <FlowDecision x:Name="__ReferenceID13" Condition="[not String.IsNullOrEmpty(country)]" DisplayName="Country filled in" sap:VirtualizedContainerService.HintSize="60,60" sap2010:WorkflowViewState.IdRef="FlowDecision_3" True="{x:Reference __ReferenceID10}" False="{x:Reference __ReferenceID8}">
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
-          <av:Point x:Key="ShapeLocation">278.4,146.4</av:Point>
-          <av:Size x:Key="ShapeSize">91,87</av:Size>
-          <av:PointCollection x:Key="TrueConnector">278.4,190 180,190 180,316.4</av:PointCollection>
-          <av:PointCollection x:Key="FalseConnector">369.4,189.9 630,189.9 630,332</av:PointCollection>
+          <av:Point x:Key="ShapeLocation">510,140</av:Point>
+          <av:Size x:Key="ShapeSize">60,60</av:Size>
+          <av:PointCollection x:Key="TrueConnector">510,170 380,170 380,310</av:PointCollection>
+          <av:PointCollection x:Key="FalseConnector">570,170 920,170 920,325</av:PointCollection>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </FlowDecision>
